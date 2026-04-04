@@ -1,0 +1,54 @@
+1 - # install GitHub CLI which is on the flake it's used to manage local repository and
+authenticate from terminal.
+
+2 - # Set Up your local repository 
+
+    git init
+
+3 - # Identify yourself
+
+    git config --global user.name "Shykid002"
+    git config --global user.email "shykid002@gmail.com"
+
+
+4 - # Stage Your Files: This is critical for Flakes; they will ignore any file not added to the Git index.
+
+    git add .
+
+
+5 - # Create First Commit:
+
+    git commit -m "Initial flake configuration"
+
+
+
+6 - # Login to GitHub Run;
+
+    gh auth login
+
+
+7 - # Create and Push to a GitHub Repo
+
+    #Create the Remote Repo:
+
+    gh repo create my-nixos-config --public --source=. --remote=origin
+
+
+8 - # Push Your Code:
+
+    git push -u origin main
+
+
+
+
+The "Everyday" Workflow
+
+# 1. Prepare the changes (Tells Nix Flakes to 'see' new files)
+git add .
+
+# 2. Save the changes locally with a note
+git commit -m "Updated mpv config and added uosc"
+
+# 3. Upload the changes to GitHub
+git push
+
