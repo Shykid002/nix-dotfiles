@@ -114,6 +114,7 @@ programs.dconf.enable = true;
 	    procps
 	    gsettings-desktop-schemas
 	    xdg-user-dirs
+        github-cli
   ];
 
 
