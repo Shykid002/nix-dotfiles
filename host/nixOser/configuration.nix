@@ -45,6 +45,7 @@
   # Enable X (needed for iSDDM)
   services.xserver.enable = true;
 
+  # Graphics acceleration
   hardware.graphics.enable = true;
   
 
@@ -116,6 +117,7 @@ programs.dconf.enable = true;
 	    xdg-user-dirs
         github-cli
         fluent-icon-theme
+        thunar
   ];
 
 
