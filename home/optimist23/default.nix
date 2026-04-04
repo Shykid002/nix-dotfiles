@@ -59,7 +59,7 @@
   programs.oh-my-posh = {
      enable = true;
      enableFishIntegration = true;
-     useTheme = "jandedobbeleer"; # Pick any theme you like
+     useTheme = "1_shell"; # Pick any theme you like
   };
 
    # Change "user" to your actual username
