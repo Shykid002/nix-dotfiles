@@ -1,0 +1,126 @@
+[config]
+# Set this to true to have matugen set the wallpaper
+# Ensure these are set for v4.0.0
+swatch_include_description = true
+
+set = true 
+
+
+command = "swww img --transition-type center {{ image }}"
+
+
+[config.wallpaper]
+# Use your wallpaper daemon (e.g., "swww", "hyprpaper", "feh")
+command = "swww" 
+arguments = ["img", "--transition-type", "center"]
+
+reload_apps = true
+
+[config.reload_apps_list]
+kitty = true
+gtk_theme = true
+
+# ...
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+# ...
+
+ [templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+#
+
+ [templates.gtk4]
+ input_path = '~/.config/matugen/templates/gtk-colors.css'
+ output_path = '~/.config/gtk-4.0/gtk.css'
+ post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+ [templates.qt5ct-me]
+ input_path = '~/.config/matugen/templates/qtct-colors-new.conf'
+ output_path = '~/.config/qt5ct/colors/matugen.conf'
+#
+
+ [templates.qt6ct-me]
+ input_path = '~/.config/matugen/templates/qtct-colors-new.conf'
+ output_path = '~/.config/qt6ct/colors/matugen.conf'
+
+
+# ...
+
+# ...
+[templates.zathura]
+input_path = '~/.config/matugen/templates/zathura-colors'
+output_path = '~/.config/zathura/zathurarc'
+post_hook = 'pkill -SIGUSR1 zathura'
+# ...
+
+# RMPC Terminal player
+[templates.rmpc]
+input_path = '~/.config/matugen/templates/rmpc.ron'
+output_path = '~/.config/rmpc/themes/custom.ron'
+
+
+# nvim
+[templates.neovim]
+input_path = '~/.config/matugen/templates/nvim-template.lua'
+output_path = '~/.config/nvim/generated.lua'
+#post_hook = 'pkill -SIGUSR1 nvim'
+
+
+# Cava theme
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/cava-theme'
+post_hook = "pkill -USR1 cava || true"
+# ...
+
+# MangowC wm
+[templates.mango]
+input_path = '~/.config/matugen/templates/mango.conf'
+output_path = '~/.config/mango/dms/colors.conf'
+post_hook = "mmsg -d reload || true"
+# ...
+
+
+# Kitty
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/theme.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+# ...
+
+
+# Wezterm
+[templates.wezterm]
+input_path = '~/.config/matugen/templates/wezterm_theme.toml'
+output_path = '~/.config/wezterm/colors/matugen-theme.toml'
+post_hook = 'touch ~/.config/wezterm/wezterm.lua'
+# ...
+
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/colors.ini'
+
+
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+
+[templates.waypaper_icon]
+input_path = '~/.config/matugen/templates/waypapericon.svg'
+output_path = '~/.config/waypaper/scripts/icon.svg'
+
+
+[templates.oh-my-posh]
+input_path = '~/.config/matugen/templates/oh-my-posh-colors.json'
+output_path = '~/.config/oh-my-posh/colors.json'
+
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'

@@ -1,0 +1,66 @@
+#!/usr/bin/fish
+
+# 1. Get wallpaper path
+set wallpaper "$argv"
+
+# 2. Extract colors dynamically
+set colors (magick "$wallpaper" -scale 50x50 -colors 6 -unique-colors txt:- | grep -oE '#[A-Fa-f0-9]{6}' | sort -u)
+
+# 3. Fallback if extraction fails
+if test -z "$colors"
+    set colors "#0bd790" "#043d3b" "#000e21" "#023442"
+end
+
+# 4. Format colors for YAD
+set yad_input
+for col in $colors
+    set yad_input $yad_input "$col" "<span bgcolor='$col' color='$col'>      </span> $col"
+end
+
+# 5. Theme Logic (Original)
+set brightness (magick "$wallpaper" -colorspace Gray -format "%[fx:mean]" info:)
+if test (math "$brightness - 0.7") -gt 0
+    set mode "light"
+    set theme "Light Theme"
+    gsettings set org.gnome.desktop.interface color-scheme prefer-light
+else
+    set mode "dark"
+    set theme "Dark Theme"
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+end
+
+# 6. Launch YAD
+set selection (printf "%s\n" $yad_input | yad --list \
+    --column="Hex":HIDE \
+    --column="Pick a color from your wallpaper" \
+    --title="Color Selection" \
+    --width=350 --height=300 \
+    --print-column=1 \
+    --separator="" \
+    --undecorated \
+    --close-on-unfocus)
+
+# 7. Apply the selection & Reload Apps
+if test $status -eq 0 -a -n "$selection"
+    # Apply Matugen
+    matugen color hex "$selection" -m "$mode" -t scheme-fruit-salad
+    
+    # RELOAD KITTY (Sends signal to all open instances to refresh config)
+    pkill -USR1 kitty
+
+    # RELOAD VIBEPANEL (Kills and restarts it to pick up new CSS/colors)
+    # If your panel is actually Waybar, use: killall -SIGUSR2 waybar
+    pkill vibepanel; hyprctl dispatch exec vibepanel
+
+    notify-send 主题已切换 "已应用选择颜色: $selection" --icon="$HOME/.config/waypaper/scripts/icon.svg"
+else
+    # Fallback to automatic
+    matugen image "$wallpaper" -m "$mode" -t scheme-fruit-salad
+    
+    # Reloads for fallback
+    pkill -USR1 kitty
+    pkill vibepanel; hyprctl dispatch exec env GSK_RENDERER=gl vibepanel &
+
+    notify-send 主题已切换 "自动模式: $theme" --icon="$HOME/.config/waypaper/scripts/icon.svg"
+end
+

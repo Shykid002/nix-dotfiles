@@ -115,6 +115,7 @@ programs.dconf.enable = true;
 	    gsettings-desktop-schemas
 	    xdg-user-dirs
         github-cli
+        fluent-icon-theme
   ];
 
 

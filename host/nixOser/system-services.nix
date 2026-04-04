@@ -39,6 +39,10 @@
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.options = "eurosign:e";
 
+  #Enable SVG Support
+  services.xserver.gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+
+
 
   # XDG portals (important for Wayland apps)
   xdg.portal.enable = true;
