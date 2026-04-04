@@ -1,0 +1,130 @@
+sw_volume: 95
+audio_device_state:1:PipeWire Sound Server
+audio_device_state:1:my_fifo
+state: pause
+current: 65
+time: 23.724
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: 
+playlist_begin
+0:Sheikh-Maher-Al-muayqly/001.mp3
+1:Sheikh-Maher-Al-muayqly/002.mp3
+2:Sheikh-Maher-Al-muayqly/003.mp3
+3:Sheikh-Maher-Al-muayqly/004.mp3
+4:Sheikh-Maher-Al-muayqly/005.mp3
+5:Sheikh-Maher-Al-muayqly/006.mp3
+6:Sheikh-Maher-Al-muayqly/007.mp3
+7:Sheikh-Maher-Al-muayqly/008.mp3
+8:Sheikh-Maher-Al-muayqly/009.mp3
+9:Sheikh-Maher-Al-muayqly/010.mp3
+10:Sheikh-Maher-Al-muayqly/011.mp3
+11:Sheikh-Maher-Al-muayqly/012.mp3
+12:Sheikh-Maher-Al-muayqly/013.mp3
+13:Sheikh-Maher-Al-muayqly/014.mp3
+14:Sheikh-Maher-Al-muayqly/015.mp3
+15:Sheikh-Maher-Al-muayqly/016.mp3
+16:Sheikh-Maher-Al-muayqly/017.mp3
+17:Sheikh-Maher-Al-muayqly/018.mp3
+18:Sheikh-Maher-Al-muayqly/019.mp3
+19:Sheikh-Maher-Al-muayqly/020.mp3
+20:Sheikh-Maher-Al-muayqly/021.mp3
+21:Sheikh-Maher-Al-muayqly/022.mp3
+22:Sheikh-Maher-Al-muayqly/023.mp3
+23:Sheikh-Maher-Al-muayqly/024.mp3
+24:Sheikh-Maher-Al-muayqly/025.mp3
+25:Sheikh-Maher-Al-muayqly/026.mp3
+26:Sheikh-Maher-Al-muayqly/027.mp3
+27:Sheikh-Maher-Al-muayqly/028.mp3
+28:Sheikh-Maher-Al-muayqly/029.mp3
+29:Sheikh-Maher-Al-muayqly/030.mp3
+30:Sheikh-Maher-Al-muayqly/031.mp3
+31:Sheikh-Maher-Al-muayqly/032.mp3
+32:Sheikh-Maher-Al-muayqly/033.mp3
+33:Sheikh-Maher-Al-muayqly/034.mp3
+34:Sheikh-Maher-Al-muayqly/035.mp3
+35:Sheikh-Maher-Al-muayqly/036.mp3
+36:Sheikh-Maher-Al-muayqly/037.mp3
+37:Sheikh-Maher-Al-muayqly/038.mp3
+38:Sheikh-Maher-Al-muayqly/039.mp3
+39:Sheikh-Maher-Al-muayqly/040.mp3
+40:Sheikh-Maher-Al-muayqly/041.mp3
+41:Sheikh-Maher-Al-muayqly/042.mp3
+42:Sheikh-Maher-Al-muayqly/043.mp3
+43:Sheikh-Maher-Al-muayqly/044.mp3
+44:Sheikh-Maher-Al-muayqly/045.mp3
+45:Sheikh-Maher-Al-muayqly/046.mp3
+46:Sheikh-Maher-Al-muayqly/047.mp3
+47:Sheikh-Maher-Al-muayqly/048.mp3
+48:Sheikh-Maher-Al-muayqly/049.mp3
+49:Sheikh-Maher-Al-muayqly/050.mp3
+50:Sheikh-Maher-Al-muayqly/051.mp3
+51:Sheikh-Maher-Al-muayqly/052.mp3
+52:Sheikh-Maher-Al-muayqly/053.mp3
+53:Sheikh-Maher-Al-muayqly/054.mp3
+54:Sheikh-Maher-Al-muayqly/055.mp3
+55:Sheikh-Maher-Al-muayqly/056.mp3
+56:Sheikh-Maher-Al-muayqly/057.mp3
+57:Sheikh-Maher-Al-muayqly/058.mp3
+58:Sheikh-Maher-Al-muayqly/059.mp3
+59:Sheikh-Maher-Al-muayqly/060.mp3
+60:Sheikh-Maher-Al-muayqly/061.mp3
+61:Sheikh-Maher-Al-muayqly/062.mp3
+62:Sheikh-Maher-Al-muayqly/063.mp3
+63:Sheikh-Maher-Al-muayqly/064.mp3
+64:Sheikh-Maher-Al-muayqly/065.mp3
+65:Sheikh-Maher-Al-muayqly/066.mp3
+66:Sheikh-Maher-Al-muayqly/067.mp3
+67:Sheikh-Maher-Al-muayqly/068.mp3
+68:Sheikh-Maher-Al-muayqly/069.mp3
+69:Sheikh-Maher-Al-muayqly/070.mp3
+70:Sheikh-Maher-Al-muayqly/071.mp3
+71:Sheikh-Maher-Al-muayqly/072.mp3
+72:Sheikh-Maher-Al-muayqly/073.mp3
+73:Sheikh-Maher-Al-muayqly/074.mp3
+74:Sheikh-Maher-Al-muayqly/075.mp3
+75:Sheikh-Maher-Al-muayqly/076.mp3
+76:Sheikh-Maher-Al-muayqly/077.mp3
+77:Sheikh-Maher-Al-muayqly/078.mp3
+78:Sheikh-Maher-Al-muayqly/079.mp3
+79:Sheikh-Maher-Al-muayqly/080.mp3
+80:Sheikh-Maher-Al-muayqly/081.mp3
+81:Sheikh-Maher-Al-muayqly/082.mp3
+82:Sheikh-Maher-Al-muayqly/083.mp3
+83:Sheikh-Maher-Al-muayqly/084.mp3
+84:Sheikh-Maher-Al-muayqly/085.mp3
+85:Sheikh-Maher-Al-muayqly/086.mp3
+86:Sheikh-Maher-Al-muayqly/087.mp3
+87:Sheikh-Maher-Al-muayqly/088.mp3
+88:Sheikh-Maher-Al-muayqly/089.mp3
+89:Sheikh-Maher-Al-muayqly/090.mp3
+90:Sheikh-Maher-Al-muayqly/091.mp3
+91:Sheikh-Maher-Al-muayqly/092.mp3
+92:Sheikh-Maher-Al-muayqly/093.mp3
+93:Sheikh-Maher-Al-muayqly/094.mp3
+94:Sheikh-Maher-Al-muayqly/095.mp3
+95:Sheikh-Maher-Al-muayqly/096.mp3
+96:Sheikh-Maher-Al-muayqly/097.mp3
+97:Sheikh-Maher-Al-muayqly/098.mp3
+98:Sheikh-Maher-Al-muayqly/099.mp3
+99:Sheikh-Maher-Al-muayqly/100.mp3
+100:Sheikh-Maher-Al-muayqly/101.mp3
+101:Sheikh-Maher-Al-muayqly/102.mp3
+102:Sheikh-Maher-Al-muayqly/103.mp3
+103:Sheikh-Maher-Al-muayqly/104.mp3
+104:Sheikh-Maher-Al-muayqly/105.mp3
+105:Sheikh-Maher-Al-muayqly/106.mp3
+106:Sheikh-Maher-Al-muayqly/107.mp3
+107:Sheikh-Maher-Al-muayqly/108.mp3
+108:Sheikh-Maher-Al-muayqly/109.mp3
+109:Sheikh-Maher-Al-muayqly/110.mp3
+110:Sheikh-Maher-Al-muayqly/111.mp3
+111:Sheikh-Maher-Al-muayqly/112.mp3
+112:Sheikh-Maher-Al-muayqly/113.mp3
+113:Sheikh-Maher-Al-muayqly/114.mp3
+playlist_end
