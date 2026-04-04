@@ -41,6 +41,7 @@
         };
 
     fonts.packages = [
+        pkgs.font-awesome 
         pkgs.dejavu_fonts
         pkgs.nerd-fonts.symbols-only
         pkgs.nerd-fonts.iosevka-term-slab

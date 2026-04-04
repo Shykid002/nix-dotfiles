@@ -118,6 +118,8 @@ programs.dconf.enable = true;
         github-cli
         fluent-icon-theme
         thunar
+        tumbler
+        ffmpegthumbnailer
   ];
 
 
