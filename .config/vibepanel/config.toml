@@ -55,7 +55,8 @@ background_opacity = 1.0
 #   on_click_right = "systemctl suspend"
 #
    [widgets.custom-os]
-   image = "~/with-home-manager/icons/Linux.png"  # file path (PNG, SVG, etc.)
+   #image = "~/with-home-manager/icons/Linux.png"  # file path (PNG, SVG, etc.)
+   image = "/run/current-system/sw/share/icons/hicolor/128x128/apps/nix-snowflake.png"
    tooltip = "My Distro"
 #
 #   [widgets.custom-weather]
