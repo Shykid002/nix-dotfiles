@@ -6,7 +6,7 @@
 
 
 wayland.windowManager.hyprland.settings = {
-  windowrulev2 = [
+  windowrule = [
     "float, title:^(Pomodoro Timer)$"
     "size 300 250, title:^(Pomodoro Timer)$"
     "center, title:^(Pomodoro Timer)$"
