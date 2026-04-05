@@ -18,12 +18,13 @@ border_radius = 30
 background_opacity = 0.0 # 0.0 = transparent (islands), 1.0 = solid
 
 [widgets]
-left = ["custom-os", "workspaces", "window_title"]
+left = ["custom-os", "workspaces", "custom-pomo-status", "window_title"]
 center = ["media"]
 right = [
   "tray",
   "updates",
   "cpu",
+  "custom-pomodoro",
   "quick_settings",
   "battery",
   "clock",
@@ -55,8 +56,8 @@ background_opacity = 1.0
 #   on_click_right = "systemctl suspend"
 #
    [widgets.custom-os]
-   #image = "~/with-home-manager/icons/Linux.png"  # file path (PNG, SVG, etc.)
-   image = "/run/current-system/sw/share/icons/hicolor/128x128/apps/nix-snowflake.png"
+  # image = "~/with-home-manager/icons/Linux.png"  # file path (PNG, SVG, etc.)
+  image = "/run/current-system/sw/share/icons/hicolor/128x128/apps/nix-snowflake.png"
    tooltip = "My Distro"
 #
 #   [widgets.custom-weather]
@@ -68,6 +69,21 @@ background_opacity = 1.0
 #   max_chars = 30
 #
 # See documentation for all widget options.
+
+
+[widgets.custom-pomodoro]
+image = "~/.config/pomodoro/icons/stopwatch.png" # Or "chronometer-symbolic"
+tooltip = "Pomodoro Timer"
+on_click = "~/Desktop/pomodoro-menu.sh"         # This matches the 'name' in your Nix config
+
+
+[widgets.custom-pomo-status]
+exec = "~/.config/pomodoro/scripts/pomodoro-status.sh"
+interval = 1
+image = "~/.config/pomodoro/icons/sand-clock2.png"
+on_click = "pomodoro-menu"
+tooltip = "Pomodoro Timer"
+
 
 [theme]
 mode = "gtk" # "auto", "dark", "light", "gtk"

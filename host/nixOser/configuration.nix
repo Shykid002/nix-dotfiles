@@ -34,16 +34,10 @@
         "quiet"
         "splash"
         "maxcpus=2"
-        "rd.systemd.show_status=false"
-        "rd.udev.log_level=3"
-        "udev.log_prority=3"
         ];
 
 
 	plymouth.enable = true;
-    initrd.systemd.enable = true;
-    initrd.verbose = false;
-    initrd.kernelModules = [ "radeon"];
 
 
   };
