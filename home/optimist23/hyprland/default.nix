@@ -12,6 +12,7 @@ let
 in
 {
   imports = [
+    ./window-rule.nix
     ./env.nix
     ./autostart.nix
     ./keybinds.nix

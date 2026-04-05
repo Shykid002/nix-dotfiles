@@ -18,22 +18,33 @@
           efiSysMountPoint = "/boot";
          };
 
-  grub = {
-     enable = true;
-     device = "nodev";
-     efiSupport = true;
-     useOSProber = false;
-    };
+    grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+        useOSProber = false;
+        };
 
  };
 
  # Enable plymouth
   boot = {
+
+    kernelParams = [ 
+        "quiet"
+        "splash"
+        "maxcpus=2"
+        "rd.systemd.show_status=false"
+        "rd.udev.log_level=3"
+        "udev.log_prority=3"
+        ];
+
+
 	plymouth.enable = true;
-        kernelParams = [ "quiet" "loglevel=3" "maxcpus=2" ];
-	initrd.systemd.enable = true;
-	plymouth.theme = "breeze";
-        consoleLogLevel = 0;
+    initrd.systemd.enable = true;
+    initrd.verbose = false;
+    initrd.kernelModules = [ "radeon"];
+
 
   };
 
@@ -42,7 +53,7 @@
 # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_6_18;
 
-  # Enable X (needed for iSDDM)
+  # Enable X11 
   services.xserver.enable = true;
 
   # Graphics acceleration
@@ -120,6 +131,7 @@ programs.dconf.enable = true;
         thunar
         tumbler
         ffmpegthumbnailer
+        gnome-pomodoro
   ];
 
 
