@@ -22,8 +22,8 @@ wayland.windowManager.hyprland.settings = {
 
     # Waypaper
     "float on, match:class ^(waypaper)$"
-    "size 659 702, match:class ^(waypaper)$"
-    "move 15 51, match:class ^(waypaper)$" 
+    "size 600 700, match:class ^(waypaper)$"
+    "pin on, match:title ^(waypaper)$"
   ];
 };
 
