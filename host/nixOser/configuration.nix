@@ -41,7 +41,7 @@
 
 
 	plymouth.enable = true;
-    plymouth.theme = "rings";
+    plymouth.theme = "glow";
 
 
   };
