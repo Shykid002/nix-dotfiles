@@ -96,12 +96,12 @@ in
           enabled = "yes";
           bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
           animation = [
-            "windows, 1, 8, myBezier, slide left"
-            "windowsOut, 1, 8, default, popin 80%"
-            "border, 1, 8, default"
-            "fade, 1, 8, default"
-            "workspaces, 1, 8, default"
-            "borderangle, 1, 50, default, loop"
+            "windows, 1, 4, myBezier, slide left"
+            "windowsOut, 1, 4, default, popin 80%"
+            "border, 1, 4, default"
+            "fade, 1, 4, default"
+            "workspaces, 1, 4, default"
+            "borderangle, 1, 30, default, loop"
           ];
 
 };

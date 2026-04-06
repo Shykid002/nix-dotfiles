@@ -45,7 +45,7 @@ in
       };
     description = ''
       Configuration written to
-      {file}`$XDG_CONFIG_HOME/hypr/pyprland.toml`
+      {file}`$XDG_CONFIG_HOME/pypr/config.toml`
     '';
   };
 
@@ -56,7 +56,7 @@ in
       settings = { exec-once = [ "pypr" ]; };
     };
 
-    xdg.configFile."hypr/pyprland.toml" = lib.mkIf (cfg.settings != { }) {
+    xdg.configFile."pypr/config.toml" = lib.mkIf (cfg.settings != { }) {
       source = tomlFormat.generate "pyprland-config" cfg.settings;
     };
   };

@@ -4,7 +4,7 @@
     settings = {
       "$schema" = "https://github.com";
       logo = {
-        source = "~/.config/fastfetch/kurose-tendo-circle.png";
+        source = "${./tweety2.png}";
         type = "kitty";
         height = 10;
         padding = {
