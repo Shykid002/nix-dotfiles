@@ -1,90 +1,74 @@
-{ pkgs, ... }:
-
-{
+{ pkgs, ... }: {
   programs.fastfetch = {
     enable = true;
     settings = {
-      "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
+      "$schema" = "https://github.com";
       logo = {
+        source = "~/.config/fastfetch/kurose-tendo-circle.png";
         type = "kitty";
-        source = "${./tweety2.png}"; 
-        width = 35;
         height = 10;
         padding = {
-          top = 0;
-          left = 1;
+          top = 5;
         };
       };
       display = {
-        separator = " ▐ ";
-        color = {
-          separator = "bright_black";
-          output = "white";
-        };
+        separator = "  ";
       };
       modules = [
+        "break" "break" "break"
+        {
+          type = "custom";
+          # Use {#color_code} for more reliable color injection in Nix strings
+          format = "{#90}    {#31}    {#32}    {#33}    {#34}    {#35}    {#36}    {#37}   ";
+        }
+        "break"
         {
           type = "title";
-          color = {
-            user = "blue";
-            at = "cyan";
-            host = "blue";
-          };
+          keyWidth = 10;
         }
-        {
-          type = "separator";
-          string = "─";
-          outputColor = "red";
-        }
+        "break"
         {
           type = "os";
-          key = " ";
-          keyColor = "blue";
-          format = "{3}";
+          key = " "; # NixOS Icon
+          keyColor = "34";
         }
         {
           type = "kernel";
-          key = " ";
-          keyColor = "white";
-          format = "{2}";
+          key = " ";
+          keyColor = "34";
         }
         {
           type = "packages";
+          format = "{} (nix)";
           key = " ";
-          keyColor = "green";
+          keyColor = "34";
         }
         {
           type = "shell";
-          key = " ";
-          keyColor = "yellow";
-          format = "{1} {4}";
+          key = " ";
+          keyColor = "34";
         }
         {
           type = "terminal";
           key = " ";
-          keyColor = "white";
+          keyColor = "34";
         }
         {
           type = "wm";
-          key = " ";
-          keyColor = "magenta";
+          key = " ";
+          keyColor = "34";
         }
         {
-          type = "display";
-          key = "   ";
-          keyColor = "cyan";
-          compactType = "original";
-          format = "{1}x{2}";
+          type = "terminalfont";
+          key = " ";
+          keyColor = "34";
         }
+        "break"
         {
           type = "colors";
-          paddingLeft = 0;
           symbol = "circle";
-          block = {
-            range = [ 0 15 ];
-            width = 3;
-          };
         }
+        "break"
       ];
     };
   };

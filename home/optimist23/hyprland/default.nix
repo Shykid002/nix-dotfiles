@@ -55,8 +55,10 @@ in
         gaps_out = 12;
         border_size = 3;
          # Use two colors here (e.g., your primary and a secondary/accent)
-        "col.active_border" = "$primary $surface 45deg"; 
-        "col.inactive_border" = "$surface";        
+        #"col.active_border" = "$primary $surface 45deg"; 
+        #"col.inactive_border" = "$surface";
+        "col.active_border" = "$primary $tertiary $secondary $surface_bright 45deg";
+        "col.inactive_border" = "$surface_container";
 
              };
 
