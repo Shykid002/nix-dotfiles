@@ -26,6 +26,8 @@
         useOSProber = false;
         };
 
+    timeout = 0;
+
  };
 
  # Enable plymouth
@@ -39,6 +41,7 @@
 
 
 	plymouth.enable = true;
+    plymouth.theme = "rings";
 
 
   };
