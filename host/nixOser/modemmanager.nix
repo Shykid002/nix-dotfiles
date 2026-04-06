@@ -1,24 +1,31 @@
 { pkgs, ... }: {
-  
-  # Crucial for laptop modems (Lenovo/Dell/ThinkPad)
-  networking.networkmanager.enableFccUnlock = true;
 
-  # Modern 4G/5G modems work best with these system-wide tools
+  # Enable the ModemManager service
+  networking.modemmanager.enable = true;
+
+  # Correct way to enable FCC unlock scripts for Lenovo/Dell/ThinkPad modems
+  # This links the default scripts provided by the modemmanager package
+  networking.modemmanager.fccUnlockScripts = [
+    {
+      path = "${pkgs.modemmanager}/share/ModemManager/fcc-unlock.available.d/*";
+    }
+  ];
+
+  # System-wide tools for management and debugging
   environment.systemPackages = with pkgs; [
-    modemmanager      # Provides 'mmcli' for debugging
-    usbutils          # Provides 'lsusb' to see your device
-    modem-manager-gui # Visual tool to send SMS and check signal
+    modemmanager      # Provides 'mmcli'
+    usbutils          # Provides 'lsusb'
+    modem-manager-gui # Visual tool for SMS/Signal
   ];
 
   # Performance & Privacy Settings
   networking.networkmanager.settings = {
-    # Helps prevent disconnects on some mobile networks
     main = {
       rc-manager = "resolvconf";
       auth-polkit = "true";
     };
-    # Optional: Disable MAC randomization if your ISP is picky
     device = {
+      # Disabling MAC randomization often helps with cellular ISP stability
       wifi.scan-rand-mac-address = "no";
     };
   };
