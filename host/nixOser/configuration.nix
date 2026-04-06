@@ -5,6 +5,7 @@
               ../../system # Path to your new module
               ./system-services.nix
               ../../profile/amd
+              ./modemmanager.nix
             ];
 
 
