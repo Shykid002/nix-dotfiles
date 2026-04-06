@@ -20,19 +20,13 @@ wayland.windowManager.hyprland.settings = {
     "size 400 500, match:class ^(gnome-pomodoro)$, match:title ^(Pomodoro)$"
     "center on, match:class ^(gnome-pomodoro)$, match:title ^(Pomodoro)$"
 
-  ];
-
-   windowrule = [
-    # New block syntax for 0.54.x
-    ''
-    {
+    "{
       name = "Waypaper Float"
       match:class = "^(waypaper)$"
       float = on
       size = 659 702
       move = 15 51
-    }
-    ''
+    }"
   ];
 };
 
