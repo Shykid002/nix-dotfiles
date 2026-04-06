@@ -3,10 +3,12 @@
   # Enable the ModemManager service
   networking.modemmanager.enable = true;
 
-  # Correct way to enable FCC unlock scripts for Lenovo/Dell/ThinkPad modems
-  # This links the default scripts provided by the modemmanager package
+  # Correct way to enable FCC unlock scripts
   networking.modemmanager.fccUnlockScripts = [
     {
+      # The 'id' is required to match your hardware. 
+      # Use "*" to apply scripts to all detected modems.
+      id = "*"; 
       path = "${pkgs.modemmanager}/share/ModemManager/fcc-unlock.available.d/*";
     }
   ];
@@ -14,7 +16,7 @@
   # System-wide tools for management and debugging
   environment.systemPackages = with pkgs; [
     modemmanager      # Provides 'mmcli'
-    usbutils          # Provides 'lsusb'
+    usbutils          # Provides 'lsusb' to see your device IDs
     modem-manager-gui # Visual tool for SMS/Signal
   ];
 
@@ -25,7 +27,6 @@
       auth-polkit = "true";
     };
     device = {
-      # Disabling MAC randomization often helps with cellular ISP stability
       wifi.scan-rand-mac-address = "no";
     };
   };
