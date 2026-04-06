@@ -41,7 +41,8 @@
 
 
 	plymouth.enable = true;
-    plymouth.theme = "glow";
+    plymouth.themePackages = [ pkgs.adi1090x-plymouth-themes ];
+    plymouth.theme = "pixels";
 
 
   };
