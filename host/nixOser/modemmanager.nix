@@ -1,34 +1,37 @@
 { pkgs, ... }: {
 
-  # Enable the ModemManager service
+  # 1. Enable the ModemManager service
   networking.modemmanager.enable = true;
 
-  # Correct way to enable FCC unlock scripts
+  # 2. Modern way to enable FCC unlock scripts (Replaces the removed enableFccUnlock)
   networking.modemmanager.fccUnlockScripts = [
     {
-      # The 'id' is required to match your hardware. 
-      # Use "*" to apply scripts to all detected modems.
+      # The 'id' field is required. Use "*" to apply to any detected modem.
       id = "*"; 
       path = "${pkgs.modemmanager}/share/ModemManager/fcc-unlock.available.d/*";
     }
   ];
 
-  # System-wide tools for management and debugging
+  # 3. System-wide tools for management and debugging
   environment.systemPackages = with pkgs; [
     modemmanager      # Provides 'mmcli'
     usbutils          # Provides 'lsusb' to see your device IDs
-    modem-manager-gui # Visual tool for SMS/Signal
+    modem-manager-gui # Visual tool for SMS and Signal monitoring
   ];
 
-  # Performance & Privacy Settings
+  # 4. Performance & Privacy Settings (Corrected INI format)
   networking.networkmanager.settings = {
     main = {
       rc-manager = "resolvconf";
       auth-polkit = "true";
     };
     device = {
-      wifi.scan-rand-mac-address = "no";
+      # This fixes the "INI atom" error by using a quoted key
+      "wifi.scan-rand-mac-address" = "no";
     };
   };
+
+  # 5. Ensure NetworkManager is enabled (if not already in your main config)
+  networking.networkmanager.enable = true;
 }
 
