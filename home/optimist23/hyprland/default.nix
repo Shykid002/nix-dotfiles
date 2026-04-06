@@ -57,7 +57,7 @@ in
          # Use two colors here (e.g., your primary and a secondary/accent)
         #"col.active_border" = "$primary $surface 45deg"; 
         #"col.inactive_border" = "$surface";
-        "col.active_border" = "$primary $secondary $tertiary $surface_tint 45deg";
+        "col.active_border" = "$secondary $tertiary $surface_tint 45deg";
         "col.inactive_border" = "$surface_container";
 
              };
