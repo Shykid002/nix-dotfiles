@@ -24,7 +24,7 @@
   home.packages = with pkgs; [
     # General apps
     vlc
-    dunst
+   # dunst
     libnotify
     fuzzel
     vibepanel
