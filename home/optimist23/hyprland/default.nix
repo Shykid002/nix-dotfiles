@@ -25,7 +25,6 @@ in
     cliphist
     wezterm
     # Scratchpad Dependencies
-    foot
     yazi
     btop
     waypaper
@@ -109,7 +108,7 @@ in
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         enable_swallow = true;
-        swallow_regex = "^(kitty|foot|wezterm)$";
+        swallow_regex = "^(wezterm)$";
       };
     };
   };

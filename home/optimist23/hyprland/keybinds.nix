@@ -22,7 +22,7 @@ in
             "$mainMod, T, togglefloating"
 
 
-             "$mainMod, Escape, exec, pypr toggle ${terminal} && hyprctl dispatch bringactivetotop"
+             "$mainMod, Escape, exec, pypr toggle term && hyprctl dispatch bringactivetotop"
              "$mainMod, E, exec, pypr toggle yazi && hyprctl dispatch bringactivetotop"
              "$mainMod, T, exec, pypr toggle btop && hyprctl dispatch bringactivetotop"
              "$mainMod, A, exec, pypr toggle pulsemixer && hyprctl dispatch bringactivetotop"
