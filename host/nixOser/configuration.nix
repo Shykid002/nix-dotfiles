@@ -41,8 +41,8 @@
 
 
 	plymouth.enable = true;
-    plymouth.themePackages = [ pkgs.adi1090x-plymouth-themes ];
-    plymouth.theme = "pixels";
+    #plymouth.themePackages = [ pkgs.adi1090x-plymouth-themes ];
+    plymouth.theme = "script";
 
 
   };
