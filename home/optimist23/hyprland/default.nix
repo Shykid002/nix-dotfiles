@@ -122,7 +122,7 @@ in
         
         term = {
           class = "scratchpad.term";
-          command = "foot --title=scratchpad.float";
+          command = "wezterm --title=scratchpad.float";
           margin = 200;
         };
 
