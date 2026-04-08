@@ -33,6 +33,13 @@ wayland.windowManager.hyprland.settings = {
     "pin on, match:class ^(yad)$" 
 
 
+    # Add these alongside your Waypaper rules
+    "float on, match:class ^(kitty-scratchpad)$"
+    "size 75% 60%, match:class ^(kitty-scratchpad)$"
+    "center on, match:class ^(kitty-scratchpad)$"
+    "workspace special:scratch_term silent, match:class ^(kitty-scratchpad)$"
+
+
     
 
   ];

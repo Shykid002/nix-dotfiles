@@ -4,7 +4,7 @@
   # 1. Install pyprland and wezterm
   home.packages = [
     pkgs.pyprland
-    pkgs.wezterm
+
   ];
 
   # 2. Configure pyprland.toml (Updated for WezTerm)
@@ -16,7 +16,7 @@
     ]
 
     [scratchpads.term]
-    command = "foot --class scratchpad-term"
+    command = "kitty --class scratchpad-term"
     class = "scratchpad-term"
     animation = "fromTop"
     size = "75% 60%"
