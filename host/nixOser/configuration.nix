@@ -115,7 +115,8 @@ programs.dconf.enable = true;
         kdePackages.breeze-icons
         bibata-cursors
         nwg-look
-	    adw-gtk3
+#	    adw-gtk3
+        kitty
 	    adwaita-icon-theme
 	    imagemagick
 	    yad

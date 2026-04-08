@@ -31,6 +31,10 @@ wayland.windowManager.hyprland.settings = {
     "size 600 700, match:class ^(yad)$"
     "center on, match:class ^(yad)$"
     "pin on, match:class ^(yad)$" 
+
+
+    
+
   ];
 };
 

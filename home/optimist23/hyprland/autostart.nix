@@ -5,8 +5,9 @@
             "dunst"
             "vibepanel"
             "lxqt-policykit-agent"
-	    "waypaper --restore"
-            "swww-daemon"   
+    	    "waypaper --restore"
+            "swww-daemon"
+            "pypr"
         ];
     };
 

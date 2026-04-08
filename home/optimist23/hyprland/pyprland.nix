@@ -1,63 +1,30 @@
-{ config, lib, pkgs, ... }:
-let
-  cfg = config.programs.pyprland;
+{ pkgs, ... }:
 
-  tomlFormat = pkgs.formats.toml { };
-in
 {
-  options.programs.pyprland = {
-    enable = lib.mkEnableOption "pyprland";
+  # 1. Install pyprland and wezterm
+  home.packages = [
+    pkgs.pyprland
+    pkgs.wezterm
+  ];
 
-    package = lib.mkOption {
-      type = lib.types.package;
-      default = pkgs.pyprland;
-      defaultText = lib.literalExpression "pkgs.pyprland";
-      description = "The package to use for the pypr binary";
-    };
+  # 2. Configure pyprland.toml (Updated for WezTerm)
+  xdg.configFile."pypr/config.toml".text = ''
+    [pyprland]
+    plugins = [
+      "scratchpads",
+      "magnify",
+    ]
 
-    settings =
-      let
-        t = lib.types;
-        prim = t.either t.bool (t.either t.int t.str);
-        primOrPrimAttrs = t.either prim (t.attrsOf prim);
-        entry = t.either prim (t.listOf primOrPrimAttrs);
-        entryOrAttrsOf = type: t.either entry (t.attrsOf type);
-        entries = entryOrAttrsOf (entryOrAttrsOf entry);
-      in
-      lib.mkOption {
-        type = lib.types.attrsOf entries;
-        default = { };
-        example = lib.literalExpression ''
-          {
-            pyprland = {
-              plugins = [
-                "scratchpads"
-                "magnify"
-              ];
-            };
-
-            "scratchpads.term" = {
-              command = "wezterm --class scratchpad";
-              margin = 100;
-            };
-          }
-        '';
-      };
-    description = ''
-      Configuration written to
-      {file}`$XDG_CONFIG_HOME/pypr/config.toml`
-    '';
-  };
-
-  config = lib.mkIf cfg.enable {
-    home.packages = [ cfg.package ];
-
-    wayland.windowManager.hyprland = {
-      settings = { exec-once = [ "pypr" ]; };
-    };
-
-    xdg.configFile."pypr/config.toml" = lib.mkIf (cfg.settings != { }) {
-      source = tomlFormat.generate "pyprland-config" cfg.settings;
-    };
-  };
+    [scratchpads.term]
+    command = "foot --class scratchpad-term"
+    class = "scratchpad-term"
+    animation = "fromTop"
+    size = "75% 60%"
+    unfocus = "hide"
+    lazy = true
+    
+    [magnify]
+    factor = 2
+  '';
 }
+

@@ -20,13 +20,8 @@ in
 	        "$mainMod, F, fullscreen"
 	        "$mainMod, Y, exec, waypaper"
             "$mainMod, T, togglefloating"
+            "$mainMod, R, exec, pypr toggle term"
 
-
-             "$mainMod, Escape, exec, pypr toggle term && hyprctl dispatch bringactivetotop"
-             "$mainMod, E, exec, pypr toggle yazi && hyprctl dispatch bringactivetotop"
-             "$mainMod, T, exec, pypr toggle btop && hyprctl dispatch bringactivetotop"
-             "$mainMod, A, exec, pypr toggle pulsemixer && hyprctl dispatch bringactivetotop"
-             "$shiftMod, W, exec, pypr toggle waypaper && hyprctl dispatch bringactivetotop"
 
 
 

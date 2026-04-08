@@ -25,6 +25,7 @@ in
     cliphist
     wezterm
     # Scratchpad Dependencies
+    foot
     yazi
     btop
     waypaper
@@ -109,59 +110,6 @@ in
         disable_splash_rendering = true;
         enable_swallow = true;
         swallow_regex = "^(wezterm)$";
-      };
-    };
-  };
-
-  programs.pyprland = {
-    enable = true;
-    settings = {
-      pyprland = { plugins = [ "scratchpads" ]; };
-      scratchpads = {
-        
-        term = {
-          class = "scratchpad.term";
-          command = "wezterm --title=scratchpad.float";
-          margin = 200;
-        };
-
-
-        yazi = {
-          class = "scratchpad.yazi";
-          command = "wezterm --title=scratchpad.float -e yazi";
-          margin = 200;
-        };
-
-
-        waypaper = {
-          lazy = true;
-          class = "waypaper";
-          animation = "fromTop";
-          command = "waypaper";
-          margin = 200;
-          size = "85% 70%";
-        };
-
-
-        btop = {
-          class = "scratchpad.btop";
-          lazy = true;
-          animation = "fromTop";
-          command = "wezterm --title=scratchpad.float -e btop -g 30:20";
-          margin = 200;
-        };
-
-
-
-        pulsemixer = {
-          lazy = true;
-          animation = "fromTop";
-          command = "wezterm --title=scratchpad.float -e pulsemixer";
-          margin = 200;
-          size = "85% 70%";
-        };
-
-
       };
     };
   };
