@@ -37,7 +37,7 @@ in
             };
 
             "scratchpads.term" = {
-              command = "kitty --class scratchpad";
+              command = "wezterm --class scratchpad";
               margin = 100;
             };
           }

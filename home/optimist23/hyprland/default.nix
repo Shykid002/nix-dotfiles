@@ -129,7 +129,7 @@ in
 
         yazi = {
           class = "scratchpad.yazi";
-          command = "foot --title=scratchpad.float -e yazi";
+          command = "wezterm --title=scratchpad.float -e yazi";
           margin = 200;
         };
 
@@ -148,7 +148,7 @@ in
           class = "scratchpad.btop";
           lazy = true;
           animation = "fromTop";
-          command = "st --title=scratchpad.float -e btop -g 30:20";
+          command = "wezterm --title=scratchpad.float -e btop -g 30:20";
           margin = 200;
         };
 
@@ -157,7 +157,7 @@ in
         pulsemixer = {
           lazy = true;
           animation = "fromTop";
-          command = "foot --title=scratchpad.float -e pulsemixer";
+          command = "wezterm --title=scratchpad.float -e pulsemixer";
           margin = 200;
           size = "85% 70%";
         };
