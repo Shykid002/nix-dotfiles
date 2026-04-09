@@ -3,6 +3,11 @@
 {
   programs.kitty = {
     enable = true;
+
+     # Sourcing the Matugen generated file
+    extraConfig = ''
+      include ~/.config/kitty/theme.conf
+    '';
     
     # Appearance and behavior
     settings = {
