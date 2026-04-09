@@ -29,7 +29,7 @@
     # The -e flag (or equivalent) passes the command to the terminal
     command = "kitty --class yazi-dropterm yazi"
     class = "yazi-dropterm"
-    size = "40% 60%"
+    size = "40% 85%"
     animation = "fromLeft"
 
     
