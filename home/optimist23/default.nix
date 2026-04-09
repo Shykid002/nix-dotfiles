@@ -11,7 +11,7 @@
  
 
   imports = [
-    ./xterm
+    ./kitty
     ./mpv 
     ./hyprlock
     ./fastfetch
