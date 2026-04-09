@@ -41,8 +41,9 @@
 
 
 	plymouth.enable = true;
+    plymouth.themePackages = [ plymouth-matrix-theme ]
     #plymouth.themePackages = [ pkgs.adi1090x-plymouth-themes ];
-    plymouth.theme = "script";
+    plymouth.theme = "matrix";
 
 
   };
@@ -118,7 +119,6 @@ programs.dconf.enable = true;
 #	    adw-gtk3
         kitty
 	    adwaita-icon-theme
-        plymouth-matrix-theme
 	    imagemagick
 	    yad
 	    libnotify
