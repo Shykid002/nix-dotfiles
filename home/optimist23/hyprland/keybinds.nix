@@ -21,8 +21,8 @@ in
 	        "$mainMod, Y, exec, waypaper"
             "$mainMod, T, togglefloating"
             "$mainMod, R, exec, pypr toggle term"
-
-
+             "$mainMod, D, exec, pypr toggle yazi"
+             
 
 
 	          ];

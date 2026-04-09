@@ -39,7 +39,6 @@ wayland.windowManager.hyprland.settings = {
     "center on, match:class ^(kitty-scratchpad)$"
     "workspace special:scratch_term silent, match:class ^(kitty-scratchpad)$"
 
-
     
 
   ];
