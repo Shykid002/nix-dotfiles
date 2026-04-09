@@ -118,6 +118,7 @@ programs.dconf.enable = true;
 #	    adw-gtk3
         kitty
 	    adwaita-icon-theme
+        plymouth-matrix-theme
 	    imagemagick
 	    yad
 	    libnotify

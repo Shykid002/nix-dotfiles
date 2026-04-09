@@ -30,6 +30,7 @@
     vibepanel
     eza
     zoxide
+    qutebrowser
   ];
 
   # Enable Fish
