@@ -41,7 +41,7 @@
 
 
 	plymouth.enable = true;
-    plymouth.themePackages = [ plymouth-matrix-theme ]
+    plymouth.themePackages = [ plymouth-matrix-theme ];
     #plymouth.themePackages = [ pkgs.adi1090x-plymouth-themes ];
     plymouth.theme = "matrix";
 
