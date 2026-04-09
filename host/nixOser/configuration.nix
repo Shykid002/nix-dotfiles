@@ -55,6 +55,15 @@
 
   # Enable X11 
   services.xserver.enable = true;
+  services.xserver.excludePackages = [ pkgs.xterm ];
+  xdg.terminal-exec = {
+  enable = true;
+  settings = {
+    default = [ "alacritty.desktop" ];
+  };
+};
+
+
 
   # Graphics acceleration
   hardware.graphics.enable = true;
