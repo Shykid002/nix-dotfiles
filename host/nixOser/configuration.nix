@@ -48,6 +48,20 @@
   };
 
 	
+    # Enable TLP
+
+  services.tlp = {
+        enable = true;
+        settings = {
+            CPU_SCALING_GOVERNOR_ON_AC = "powersave";
+            CPU_SCALING_GOVERNOR_ON_Bat = "powersave";
+            CPU_ENERGY_PERF_POLICY_ON_AC = "power";
+            CPU_ENERGY_PERF_POLICY_ON_AC = "power";
+        }
+
+
+
+  }
 
 # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_6_18;

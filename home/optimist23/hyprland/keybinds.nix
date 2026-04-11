@@ -21,13 +21,15 @@ in
 	        "$mainMod, Y, exec, waypaper"
 
             "$mainMod, T, togglefloating"
-	        "$mainMod, M, monocle:toggle"
+	        "$mainMod, M, exec, hyprctl keyword general:layout master"
+          "$mainMod, A, exec, hyprctl keyword general:layout dwindle"
 
-            "$mainMod, R, exec, pypr toggle term"
-             "$mainMod, D, exec, pypr toggle yazi"
+
+          "$mainMod, R, exec, pypr toggle term"
+          "$mainMod, D, exec, pypr toggle yazi"
               
 
-	  "$mainMod, h, movefocus, l"
+    	  "$mainMod, h, movefocus, l"
           "$mainMod, l, movefocus, r"
           "$mainMod, k, movefocus, u"
           "$mainMod, j, movefocus, d"
