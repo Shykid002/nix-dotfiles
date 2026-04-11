@@ -19,7 +19,6 @@
                 brave
                 zathura
                 zathuraPkgs.zathura_pdf_mupdf
-                matugen
                 tree
                 kdePackages.qt6ct
                 libsForQt5.qt5ct
