@@ -30,6 +30,13 @@
 
 
 
+    # Matugen
+      programs.matugen = {
+           enable = true;
+        };
+    
+
+
     # Garbage collecter
     nix.settings.auto-optimise-store = true;
   
