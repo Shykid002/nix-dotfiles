@@ -36,7 +36,6 @@
     kernelParams = [ 
         "quiet"
         "splash"
-        "maxcpus=2"
         ];
 
 

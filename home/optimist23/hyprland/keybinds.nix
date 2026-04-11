@@ -15,13 +15,35 @@ in
         bind = [
             "$mainMod, Q, exec, ${terminal}"
             "$mainMod, C, killactive,"
-            "$mainMod, M, exit,i"
+            "CTRL, M, exit"
 	        "$mainMod, space, exec, fuzzel"
 	        "$mainMod, F, fullscreen"
 	        "$mainMod, Y, exec, waypaper"
+
             "$mainMod, T, togglefloating"
+	        "$mainMod, M, monocle:toggle"
+
             "$mainMod, R, exec, pypr toggle term"
              "$mainMod, D, exec, pypr toggle yazi"
+              
+
+	  "$mainMod, h, movefocus, l"
+          "$mainMod, l, movefocus, r"
+          "$mainMod, k, movefocus, u"
+          "$mainMod, j, movefocus, d"
+
+          "$mainMod SHIFT, H, movewindow, l"
+          "$mainMod SHIFT, L, movewindow, r"
+          "$mainMod SHIFT, K, movewindow, u"
+          "$mainMod SHIFT, J, movewindow, d"
+
+          "$mainMod CTRL, l, resizeactive, 20 0"
+          "$mainMod CTRL, h, resizeactive, -20 0"
+          "$mainMod CTRL, k, resizeactive, 0 -20"
+          "$mainMod CTRL, j, resizeactive, 0 20"
+
+          "$mainMod, n, workspace, e+1"
+          "$mainMod, p, workspace, e-1"
              
 
 
