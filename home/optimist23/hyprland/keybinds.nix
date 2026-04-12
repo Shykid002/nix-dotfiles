@@ -27,6 +27,7 @@ in
 
           "$mainMod, R, exec, pypr toggle term"
           "$mainMod, D, exec, pypr toggle yazi"
+          "$mainMod, P, exec, pypr toggle volume"
               
 
     	  "$mainMod, h, movefocus, l"
@@ -45,7 +46,7 @@ in
           "$mainMod CTRL, j, resizeactive, 0 20"
 
           "$mainMod, n, workspace, e+1"
-          "$mainMod, p, workspace, e-1"
+          "$mainMod, b, workspace, e-1"
              
 
 

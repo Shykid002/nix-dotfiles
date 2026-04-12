@@ -28,7 +28,7 @@ wayland.windowManager.hyprland.settings = {
 
     # yad
     "float on, match:class ^(yad)$"
-    "size 600 700, match:class ^(yad)$"
+    "size 400 300, match:class ^(yad)$"
     "center on, match:class ^(yad)$"
     "pin on, match:class ^(yad)$" 
 

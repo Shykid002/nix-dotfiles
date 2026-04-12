@@ -25,16 +25,11 @@
 		        mpd-mpris
                 cava
 	            brightnessctl
+                matugen
                 mpc
+                nemo
             ];
 
-
-
-    # Matugen
-      programs.matugen = {
-           enable = true;
-        };
-    
 
 
     # Garbage collecter

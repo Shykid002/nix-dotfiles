@@ -3,22 +3,14 @@
 # Ensure these are set for v4.0.0
 swatch_include_description = true
 
-set = true 
+[config.custom_colors]
+red = { color = "#f38ba8", blend = true }
+green = { color = "#a6e3a1", blend = true }
+yellow = { color = "#f9e2af", blend = true }
+blue = { color = "#89b4fa", blend = true }
+orange = { color = "#fab387", blend = true }
+purple = { color = "#cba6f7", blend = true }
 
-
-command = "swww img --transition-type center {{ image }}"
-
-
-[config.wallpaper]
-# Use your wallpaper daemon (e.g., "swww", "hyprpaper", "feh")
-command = "swww" 
-arguments = ["img", "--transition-type", "center"]
-
-reload_apps = true
-
-[config.reload_apps_list]
-kitty = true
-gtk_theme = true
 
 # ...
 [templates.hyprland]
@@ -34,7 +26,6 @@ output_path = '~/.config/gtk-3.0/gtk.css'
  [templates.gtk4]
  input_path = '~/.config/matugen/templates/gtk-colors.css'
  output_path = '~/.config/gtk-4.0/gtk.css'
- post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
 
  [templates.qt5ct-me]
  input_path = '~/.config/matugen/templates/qtct-colors-new.conf'

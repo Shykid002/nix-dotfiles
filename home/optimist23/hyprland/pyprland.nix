@@ -32,6 +32,15 @@
     size = "50% 85%"
     animation = "fromLeft"
 
+
+     [scratchpads.volume]
+    # Replace 'kitty' with your terminal (e.g., alacritty, foot)
+    # The -e flag (or equivalent) passes the command to the terminal
+    command = "kitty --class pulsemixer-scratchpad -e pulsemixer"
+    class = "pulsemixer-scratchpad"
+    size = "50% 85%"
+    animation = "fromRight"
+
     
     [magnify]
     factor = 2

@@ -31,6 +31,7 @@
     eza
     zoxide
     qutebrowser
+    pulsemixer
   ];
 
   # Enable Fish
