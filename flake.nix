@@ -6,11 +6,8 @@
     
     vibepanel.url = "github:prankstr/vibepanel";
 
-    matugen = {
-      url = "github:InioX/matugen";
-      # Optional: Pin to a specific version
-      # url = "github:InioX/matugen?ref=refs/tags/matugen-v0.10.0";
-    };
+    matugen.url = "github:InioX/matugen/v4.1.0";
+    
     
     home-manager = {
       url = "github:nix-community/home-manager";

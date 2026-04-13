@@ -99,15 +99,16 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1775904847,
-        "narHash": "sha256-8YJl33NZiaVeW6KAUHdf3p43Guk+w4RzIC2lTe9nsrU=",
+        "lastModified": 1774167871,
+        "narHash": "sha256-xzwMDWb6pF3oStVoS8enNhpYptxdnB1NSIO7dUH6/qk=",
         "owner": "InioX",
         "repo": "matugen",
-        "rev": "d8554cab079d33874dba3dd2799d312b0ada86e6",
+        "rev": "4112d352914742ba69f6380fd07984adba02d376",
         "type": "github"
       },
       "original": {
         "owner": "InioX",
+        "ref": "v4.1.0",
         "repo": "matugen",
         "type": "github"
       }

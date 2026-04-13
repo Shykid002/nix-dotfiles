@@ -27,7 +27,9 @@
 	            brightnessctl
                 matugen
                 mpc
-                nemo
+	        	notify
+                #nemo
+                #inputs.matugen.packages.${system}.default
             ];
 
 

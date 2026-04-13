@@ -79,7 +79,7 @@ in
         };
 
         shadow = {
-            enabled = true;
+            enabled = false;
             range = 20;
             render_power = 3;
             color = "0xee1a1a1a";
@@ -105,6 +105,7 @@ in
 };
     
       misc = {
+        vfr = true;
         vrr = 0;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;

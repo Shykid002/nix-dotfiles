@@ -37,6 +37,7 @@
         "quiet"
         "splash"
         "maxcpus=2"
+        "radeon.dpm=1"
         ];
 
 
@@ -47,6 +48,9 @@
 
 
   };
+
+   # Enable thermald
+    services.thermald.enable = true;
 
 	
     # Enable TLP
