@@ -1,4 +1,7 @@
 #!/usr/bin/env fish
+#
+#
+
 
 # 1. Get wallpaper path
 set wallpaper "$argv"
@@ -45,6 +48,9 @@ if test $status -eq 0 -a -n "$selection"
         exit
     end
 
+    notify-send "主题已切换" "颜色: $selection | 模式: $final_mode" --icon="$HOME/.config/waypaper/scripts/icon.svg"
+
+
     # 7. Apply Everything
     
     # Apply GTK Preferences
@@ -63,6 +69,7 @@ if test $status -eq 0 -a -n "$selection"
     pkill -USR1 kitty
     pkill vibepanel; hyprctl dispatch exec env GSK_RENDERER=gl vibepanel
 
-    notify-send 主题已切换 "颜色: $selection | 模式: $final_mode" --icon="$HOME/.config/waypaper/scripts/icon.svg"
+    
+
 end
 

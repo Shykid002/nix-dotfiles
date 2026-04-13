@@ -32,6 +32,7 @@
     zoxide
     qutebrowser
     pulsemixer
+    hyprshade
   ];
 
   # Enable Fish
