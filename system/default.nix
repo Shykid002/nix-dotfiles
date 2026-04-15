@@ -29,7 +29,7 @@
                 mpc
 	        	notify
                 piper-tts
-                poppler_utils
+                poppler-utils
                 #nemo
                 #inputs.matugen.packages.${system}.default
             ];
