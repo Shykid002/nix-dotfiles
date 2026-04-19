@@ -14,8 +14,8 @@
         {
           monitor = "";
           path = "/home/optimist23/.cache/current_wallpaper.png";
-          blur_passes = 2; # 0 disables blurring
-          blur_size = 7;
+          blur_passes = 5; # 0 disables blurring
+          blur_size = 5;
           noise = 0.0117;
         }
       ];

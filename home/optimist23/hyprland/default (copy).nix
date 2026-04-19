@@ -17,6 +17,7 @@ in
     ./autostart.nix
     ./keybinds.nix
     ./pyprland.nix
+    ./layout.nix
 
   ];
 
@@ -51,14 +52,11 @@ in
       };
 
       general = {
-        layout = "dwindle";
-        resize_on_border = true;
-        allow_tearing = true;
-        gaps_in = 3;
-        gaps_out = 7;
+        gaps_in = 6;
+        gaps_out = 12;
         border_size = 3;
          # Use two colors here (e.g., your primary and a secondary/accent)
-        "col.active_border" = "$primary $surface $tertiary $surface $secondary 45deg";
+        "col.active_border" = "$primary $surface 45deg"; 
         "col.inactive_border" = "$surface";
        
              };
@@ -99,27 +97,14 @@ in
 
     animations = {
           enabled = "yes";
-          bezier = [
-           "linear, 0, 0, 1, 1"
-           "win, 0.05, 0.9, 0.1, 1.05"
-           "winIn, 0.05, 0.7, 0.1, 1.1"
-           "winOut, 0.05, 0.6, 0.1, 1"
-           "menu_decel, 0.1, 1, 0, 1.02"
-           "menu_accel, 0.38, 0.04, 1, 0.07"
-           ];
+          bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
           animation = [
-            "windows,     1, 4, win, slide"
-            "windowsIn,   1, 5, winIn, slide"
-            "windowsOut,  1, 5, winOut, slide"
-            "windowsMove, 1, 5, win, slide"
-            "border, 1, 10, default"
-            "borderangle, 1,10, linear"
-            "fade, 1, 3, winIn"
-            "layersIn, 1, 2, menu_decel,"
-            "fadeLayersIn, 1, 2, menu_decel"
-            "fadeLayersOut, 1, 4.5, menu_accel"
-            "workspaces, 1, 7, menu_decel, slide"
-            "specialWorkspace, 1, 4, winIn, slidevert"
+            "windows, 1, 4, myBezier, slide left"
+            "windowsOut, 1, 4, default, popin 80%"
+            "border, 1, 4, default"
+            "fade, 1, 4, default"
+            "workspaces, 1, 4, default"
+            "borderangle, 1, 30, default, loop"
           ];
 
 };
