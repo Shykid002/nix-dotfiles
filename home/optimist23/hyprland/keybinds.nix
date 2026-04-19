@@ -22,11 +22,11 @@ in
 
             "$mainMod, T, togglefloating"
 	        "$mainMod, M, exec, hyprctl keyword general:layout master"
-          "$mainMod, A, exec, hyprctl keyword general:layout dwindle"
+          "$mainMod, D, exec, hyprctl keyword general:layout dwindle"
 
 
           "$mainMod, R, exec, pypr toggle term"
-          "$mainMod, D, exec, pypr toggle yazi"
+          "$mainMod, S, exec, pypr toggle yazi"
           "$mainMod, P, exec, pypr toggle volume"
               
 
