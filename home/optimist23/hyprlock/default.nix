@@ -3,7 +3,7 @@
 let
 
  # Variables from your config
-  img = "./assets";
+  img = ./. + "./assets";
 
   # Colors
   background = "rgba(0, 0, 0, 0)";
@@ -142,9 +142,9 @@ in
           # YEAR
           monitor = "";
           text = "cmd[update:1000] date +\"%Y\"";
-          color = "$foreground";
+          color = "foreground";
           font_size = 10;
-          font_family = "$alt";
+          font_family = "alt-font";
           position = "-48, -28";
           halign = "right";
           valign = "top";
@@ -167,7 +167,7 @@ in
           text = "LIVE";
           color = "$foreground";
           font_size = 10;
-          font_family = "$alt";
+          font_family = "alt-font";
           position = "200, 252";
           halign = "left";
           valign = "center";
@@ -175,9 +175,9 @@ in
         {
           # TAG-CENTER
           text = "YOUR";
-          color = "$foreground";
+          color = "foreground";
           font_size = 10;
-          font_family = "$alt";
+          font_family = "alt-font";
           position = "0, 252";
           halign = "center";
           valign = "center";
@@ -185,9 +185,9 @@ in
         {
           # TAG-RIGHT
           text = "LIFE";
-          color = "$foreground";
+          color = "foreground";
           font_size = 10;
-          font_family = "$alt";
+          font_family = "alt-font";
           position = "-200, 252";
           halign = "right";
           valign = "center";
@@ -196,9 +196,9 @@ in
          {
           # TAG-BOT
           text = "HYPRSTELLAR";
-          color = "$foreground";
+          color = "foreground";
           font_size = 9;
-          font_family = "$alt";
+          font_family = "alt-font";
           position = "-35, 25";
           halign = "right";
           valign = "bottom";
@@ -206,7 +206,7 @@ in
         {
           # HIRAGANA
           text = "かいぜん";
-          color = "$foreground";
+          color = "foreground";
           font_size = 10;
           font_family = "alt-font";
           position = "0, 190";
@@ -216,7 +216,7 @@ in
         {
           # QUOTES-TOP
           text = "You can have everything and feel nothing.";
-          color = "$foreground";
+          color = "foreground";
           font_size = 8;
           font_family = "Ndot55Caps";
           position = "0, 130";
@@ -226,7 +226,7 @@ in
         {
           # QUOTES-BOT
           text = "What you resist, persists. What you accept, dissolves.    What you resist, persists. What you accept, dissolves.";
-          color = "$foreground";
+          color = "foreground";
           font_size = 12;
           font_family = "Ndot55Caps";
           position = "0, 115";
@@ -237,10 +237,10 @@ in
           {
           # BATTERY
           text = "cmd[update:1000] ${./battery.sh} --hyprlock";
-          color = "$foreground";
+          color = "foreground";
           font_size = 12;
-          font_family = "$main Bold";
-          position = "-1630, 110";
+          font_family = "main-font";
+          position = "-930, 110";
           halign = "right";
           valign = "bottom";
           zindex = 1;
@@ -248,10 +248,10 @@ in
         {
           # KEYBOARD LAYOUT
           text = "cmd[update:1000] ${./lang_notify.sh} --hyprlock";
-          color = "$foreground";
+          color = "foreground";
           font_size = 12;
-          font_family = "$main Bold";
-          position = "-1630, 90";
+          font_family = "main-font";
+          position = "-730, 90";
           halign = "right";
           valign = "bottom";
           zindex = 1;
@@ -283,11 +283,11 @@ in
         } 
 
         {
-          path = "$img/steinberg.jpg";
+          path = "${img}/steinberg.jpg";
           size = 110;
           rounding = 6;
           border_size = 0;
-          border_color = "$foreground-alt";
+          border_color = "foreground-alt";
           rotate = 0;
           reload_time = -1;
           position = "30, 25";
@@ -314,7 +314,7 @@ in
         dots_spacing = 0.3;
         dots_center = true;
         fade_on_empty = false;
-        position = "-625, 21";
+        position = "-925, 21";
         halign = "right";
         valign = "bottom";
       }];
