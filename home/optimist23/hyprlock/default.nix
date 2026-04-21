@@ -3,7 +3,7 @@
 let
 
  # Variables from your config
-  img = ./. + "./assets";
+  img = ./assets;
 
   # Colors
   background = "rgba(0, 0, 0, 0)";
@@ -53,7 +53,7 @@ in
           size = "1300, 2";
           color = foreground;
           rounding = -1;
-          position = "0, 250";
+          position = "0, 265";
           halign = "center";
           valign = "center";
         }
@@ -144,7 +144,7 @@ in
           text = "cmd[update:1000] date +\"%Y\"";
           color = "foreground";
           font_size = 10;
-          font_family = "alt-font";
+          font_family = "alt";
           position = "-48, -28";
           halign = "right";
           valign = "top";
@@ -156,7 +156,7 @@ in
           color = foreground;
           font_family = alt-font;
           font_size = 11;
-          position = "-1630, 52";
+          position = "-1125, 52";
           halign = "right";
           valign = "bottom";
         }
@@ -165,7 +165,7 @@ in
          {
           # TAG-LEFT
           text = "LIVE";
-          color = "$foreground";
+          color = "foreground";
           font_size = 10;
           font_family = "alt-font";
           position = "200, 252";
@@ -240,7 +240,7 @@ in
           color = "foreground";
           font_size = 12;
           font_family = "main-font";
-          position = "-930, 110";
+          position = "-1130, 110";
           halign = "right";
           valign = "bottom";
           zindex = 1;
@@ -251,7 +251,7 @@ in
           color = "foreground";
           font_size = 12;
           font_family = "main-font";
-          position = "-730, 90";
+          position = "-735, 90";
           halign = "right";
           valign = "bottom";
           zindex = 1;
@@ -267,7 +267,7 @@ in
      {
           monitor = "";
           path = "${img}/arrow.png";
-          size = 30;
+          size = 15;
           position = "150, 100";
           halign = "left";
           valign = "bottom";
@@ -275,7 +275,7 @@ in
         {
           monitor = "";
           path = "${img}/logo.png";
-          size = 50;
+          size = 30;
           position = "0, 40";
           halign = "center";
           valign = "bottom";
@@ -314,7 +314,7 @@ in
         dots_spacing = 0.3;
         dots_center = true;
         fade_on_empty = false;
-        position = "-925, 21";
+        position = "-1125, 21";
         halign = "right";
         valign = "bottom";
       }];

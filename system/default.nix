@@ -30,10 +30,19 @@
 	        	notify
                 piper-tts
                 poppler-utils
+                bluez
+                bluez-tools
+                blueman
+                pavucontrol
+                #quickshell
                 #nemo
                 #inputs.matugen.packages.${system}.default
             ];
 
+    hardware.bluetooth = {
+        enable = true;      # Enables the bluez service
+        powerOnBoot = true; # Automatically powers on the bluetooth controller
+    };
 
 
     # Garbage collecter
