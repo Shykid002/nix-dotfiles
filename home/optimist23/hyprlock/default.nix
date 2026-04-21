@@ -133,7 +133,7 @@ in
         {
           monitor = "";
           text = "cmd[update:1000] date +\"%a %B %d\"";
-          color = foreground;
+          color = custom-color;
           font_family = main-font;
           font_size = 50;
           rotate = 90;
@@ -146,7 +146,7 @@ in
           # YEAR
           monitor = "";
           text = "cmd[update:1000] date +\"%Y\"";
-          color = "foreground";
+          color = "custom-color";
           font_size = 10;
           font_family = "alt";
           position = "-48, -28";
@@ -220,8 +220,8 @@ in
         {
           # QUOTES-TOP
           text = "You can have everything and feel nothing.";
-          color = "foreground";
-          font_size = 8;
+          color = "custom-color";
+          font_size = 10;
           font_family = "Ndot55Caps";
           position = "0, 130";
           halign = "center";
@@ -244,7 +244,7 @@ in
           color = "custom-color";
           font_size = 12;
           font_family = "main-font";
-          position = "-1130, 110";
+          position = "-730, 110";
           halign = "right";
           valign = "bottom";
           zindex = 1;
@@ -255,7 +255,7 @@ in
           color = "foreground";
           font_size = 12;
           font_family = "main-font";
-          position = "-833, 90";
+          position = "35, 20";
           halign = "right";
           valign = "bottom";
           zindex = 1;
