@@ -200,7 +200,7 @@ in
          {
           # TAG-BOT
           text = "HYPRSTELLAR";
-          color = "foreground";
+          color = "matrix-green";
           font_size = 9;
           font_family = "alt-font";
           position = "-35, 25";
@@ -255,7 +255,7 @@ in
           color = "foreground";
           font_size = 12;
           font_family = "main-font";
-          position = "35, 20";
+          position = "-45, 25";
           halign = "right";
           valign = "bottom";
           zindex = 1;

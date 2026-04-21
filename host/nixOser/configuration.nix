@@ -159,6 +159,7 @@ programs.dconf.enable = true;
         tumbler
         ffmpegthumbnailer
         gnome-pomodoro
+        feh
   ];
 
 
