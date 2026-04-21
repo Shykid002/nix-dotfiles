@@ -6,6 +6,10 @@ let
   img = ./assets;
 
   # Colors
+  frost-glass  = "rgba(224, 235, 254, 0.1)";
+  matrix-green = "rgba(145, 235, 134, 1.0)";
+  jpn = "rgba(187, 154, 247, 1.0)";
+  custom-color = "rgba(244, 182, 194, 1.0)";
   background = "rgba(0, 0, 0, 0)";
   foreground = "rgba(255, 255, 255, 1.0)";
   foreground-alt = "rgba(255, 255, 255, 0.3)";
@@ -107,7 +111,7 @@ in
         {
           monitor = "";
           text = "cmd[update:1000] date +\" %I\"";
-          color = foreground;
+          color = custom-color;
           font_family = main-font;
           font_size = 80;
           position = "7, -22";
@@ -118,7 +122,7 @@ in
         {
           monitor = "";
           text = "cmd[update:1000] date +\" %M\"";
-          color = foreground;
+          color = custom-color;
           font_family = main-font;
           font_size = 80;
           position = "7, -123";
@@ -156,7 +160,7 @@ in
           color = foreground;
           font_family = alt-font;
           font_size = 11;
-          position = "-1125, 52";
+          position = "-1120, 52";
           halign = "right";
           valign = "bottom";
         }
@@ -206,8 +210,8 @@ in
         {
           # HIRAGANA
           text = "かいぜん";
-          color = "foreground";
-          font_size = 10;
+          color = "custom-color";
+          font_size = 14;
           font_family = "alt-font";
           position = "0, 190";
           halign = "center";
@@ -237,7 +241,7 @@ in
           {
           # BATTERY
           text = "cmd[update:1000] ${./battery.sh} --hyprlock";
-          color = "foreground";
+          color = "custom-color";
           font_size = 12;
           font_family = "main-font";
           position = "-1130, 110";
@@ -251,7 +255,7 @@ in
           color = "foreground";
           font_size = 12;
           font_family = "main-font";
-          position = "-735, 90";
+          position = "-833, 90";
           halign = "right";
           valign = "bottom";
           zindex = 1;
@@ -279,11 +283,11 @@ in
           position = "0, 40";
           halign = "center";
           valign = "bottom";
-          zindex = -1;
+          zindex = 0;
         } 
 
         {
-          path = "${img}/steinberg.jpg";
+          path = "${img}/toro.jpg";
           size = 110;
           rounding = 6;
           border_size = 0;
@@ -314,7 +318,7 @@ in
         dots_spacing = 0.3;
         dots_center = true;
         fade_on_empty = false;
-        position = "-1125, 21";
+        position = "-1120, 21";
         halign = "right";
         valign = "bottom";
       }];
