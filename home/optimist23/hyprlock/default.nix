@@ -210,7 +210,7 @@ in
         {
           # HIRAGANA
           text = "かいぜん";
-          color = custom-color;
+          color = jpn;
           font_size = 14;
           font_family = "alt-font";
           position = "0, 190";
@@ -244,7 +244,7 @@ in
          color = custom-color;
          font_size = 12;
          font_family = main-font;
-         position = "-60, 50"; # Adjusted for 1366x768 screen
+         position = "-50, 70"; # Adjusted for 1366x768 screen
          halign = "right";
          valign = "bottom";
         }
@@ -257,7 +257,7 @@ in
           color = matrix-green;
           font_size = 12;
           font_family = "main-font";
-          position = "-45, 35";
+          position = "-45, 45";
           halign = "right";
           valign = "bottom";
           zindex = 1;
@@ -351,6 +351,25 @@ in
           timeout = 600;
           on-timeout = "hyprctl dispatch dpms off";
           on-resume = "hyprctl dispatch dpms on";
+        }
+
+        {
+        # Dim screen after 2.5 minutes
+        timeout = 150;
+        on-timeout = "brightnessctl set 10%"; 
+        on-resume = "brightnessctl set 100%";
+        }
+
+        {
+        timeout = 150;
+        on-timeout = "brightnessctl -d *kbd_backlight* set 0";
+        on-resume = "brightnessctl -d *kbd_backlight* set 100%";
+        }
+
+        {
+          # Suspend the system after 15 minutes (900 seconds)
+          timeout = 900;
+          on-timeout = "systemctl suspend";
         }
       ];
     };

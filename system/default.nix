@@ -34,7 +34,7 @@
                 bluez-tools
                 blueman
                 pavucontrol
-                #quickshell
+                quickshell
                 #nemo
                 #inputs.matugen.packages.${system}.default
             ];
