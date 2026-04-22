@@ -210,7 +210,7 @@ in
         {
           # HIRAGANA
           text = "かいぜん";
-          color = "custom-color";
+          color = custom-color;
           font_size = 14;
           font_family = "alt-font";
           position = "0, 190";
@@ -238,24 +238,26 @@ in
           valign = "bottom";
         }
 
-          {
-          # BATTERY
-          text = "cmd[update:1000] ${./battery.sh} --hyprlock";
-          color = "custom-color";
-          font_size = 12;
-          font_family = "main-font";
-          position = "-730, 110";
-          halign = "right";
-          valign = "bottom";
-          zindex = 1;
+       {
+         # BATTERY
+         text = "cmd[update:1000] echo \"$(${./battery.sh})\"";
+         color = custom-color;
+         font_size = 12;
+         font_family = main-font;
+         position = "-50, 50"; # Adjusted for 1366x768 screen
+         halign = "right";
+         valign = "bottom";
         }
+
+
+
         {
           # KEYBOARD LAYOUT
           text = "cmd[update:1000] ${./lang_notify.sh} --hyprlock";
           color = "foreground";
           font_size = 12;
           font_family = "main-font";
-          position = "-45, 25";
+          position = "-45, 35";
           halign = "right";
           valign = "bottom";
           zindex = 1;
