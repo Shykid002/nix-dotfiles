@@ -199,9 +199,9 @@ in
 
          {
           # TAG-BOT
-          text = "HYPRSTELLAR";
-          color = "matrix-green";
-          font_size = 9;
+          text = "nixOser";
+          color = frost-glass;
+          font_size = 12;
           font_family = "alt-font";
           position = "-35, 25";
           halign = "right";
@@ -244,7 +244,7 @@ in
          color = custom-color;
          font_size = 12;
          font_family = main-font;
-         position = "-50, 50"; # Adjusted for 1366x768 screen
+         position = "-60, 50"; # Adjusted for 1366x768 screen
          halign = "right";
          valign = "bottom";
         }
@@ -254,7 +254,7 @@ in
         {
           # KEYBOARD LAYOUT
           text = "cmd[update:1000] ${./lang_notify.sh} --hyprlock";
-          color = "foreground";
+          color = matrix-green;
           font_size = 12;
           font_family = "main-font";
           position = "-45, 35";
