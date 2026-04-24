@@ -35,6 +35,7 @@
                 blueman
                 pavucontrol
                 quickshell
+                kdePackages.qt5compat
                 #nemo
                 #inputs.matugen.packages.${system}.default
             ];

@@ -156,9 +156,9 @@ in
         # NAME
         {
           monitor = "";
-          text = "HUMAN-01";
+          text = "神童;)";
           color = foreground;
-          font_family = alt-font;
+          font_family = main-font;
           font_size = 11;
           position = "-1120, 52";
           halign = "right";
@@ -202,7 +202,7 @@ in
           text = "nixOser";
           color = frost-glass;
           font_size = 12;
-          font_family = "alt-font";
+          font_family = "main-font";
           position = "-35, 25";
           halign = "right";
           valign = "bottom";
@@ -221,7 +221,7 @@ in
           # QUOTES-TOP
           text = "You can have everything and feel nothing.";
           color = "custom-color";
-          font_size = 10;
+          font_size = 12;
           font_family = "Ndot55Caps";
           position = "0, 130";
           halign = "center";
