@@ -35,11 +35,16 @@
                 blueman
                 pavucontrol
                 quickshell
-                kdePackages.qt5compat
+                qt6.qt5compat
+                 qt5.qtgraphicaleffects
+                playerctl
                 #nemo
                 #inputs.matugen.packages.${system}.default
             ];
 
+
+    environment.systemPackages = with pkgs; [ qt5.qtgraphicaleffects qt5.qtdeclarative ];
+    
     hardware.bluetooth = {
         enable = true;      # Enables the bluez service
         powerOnBoot = true; # Automatically powers on the bluetooth controller
