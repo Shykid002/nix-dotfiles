@@ -37,13 +37,13 @@
                 quickshell
                 qt6.qt5compat
                  qt5.qtgraphicaleffects
+                 qt5.qtdeclarative
                 playerctl
                 #nemo
                 #inputs.matugen.packages.${system}.default
             ];
 
 
-    environment.systemPackages = with pkgs; [ qt5.qtgraphicaleffects qt5.qtdeclarative ];
     
     hardware.bluetooth = {
         enable = true;      # Enables the bluez service
