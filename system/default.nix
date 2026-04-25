@@ -35,9 +35,9 @@
                 blueman
                 pavucontrol
                 quickshell
-                qt6.qt5compat
-                 qt6.qtgraphicaleffects
-                 qt6.qtdeclarative
+                qt5.qtgraphicaleffects
+                qt5.qtdeclarative
+                qt5.qtquickcontrols
                 playerctl
                 #nemo
                 #inputs.matugen.packages.${system}.default
