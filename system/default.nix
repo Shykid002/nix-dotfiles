@@ -9,6 +9,7 @@
 
 
           environment.systemPackages = with pkgs;[
+                awww
                 git
                 curl
                 neovim
@@ -47,11 +48,7 @@
                 #nemo
                 #inputs.matugen.packages.${system}.default
             ];
-    #enable Qt
-    qt = {
-        enable = true;
-        platformTheme.name = "qtct";
-        };
+    # Bluetooth 
     
     hardware.bluetooth = {
         enable = true;      # Enables the bluez service
