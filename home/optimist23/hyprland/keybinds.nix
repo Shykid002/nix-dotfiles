@@ -48,7 +48,7 @@ in
           "$mainMod, n, workspace, e+1"
           "$mainMod, b, workspace, e-1"
              
-          "SHIFT ALT, S, exec, grim -g "$(slurp)" - | tee ~/Pictures/Screenshots/$(date
+          "SHIFT ALT, S, exec, grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/$(date
           +'%Y-%m-%d-%H%M%S_grim.png') | wl-copy"
           "CTRL SHIFT, S, exec, grim - | wl-copy"
           "CTRL, ALT, exec, grim - | wl-copy"
