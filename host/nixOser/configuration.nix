@@ -139,27 +139,28 @@ programs.dconf.enable = true;
   
   # System packages
   environment.systemPackages = with pkgs; [
-	    lxqt.lxqt-policykit  
-        kdePackages.breeze-icons
-        bibata-cursors
-        nwg-look
-#	    adw-gtk3
-	    adwaita-icon-theme
-	    imagemagick
-	    yad
-	    libnotify
-	    procps
-	    glib
-	    gsettings-desktop-schemas
-	    xdg-user-dirs
-        github-cli
-        fluent-icon-theme
-        thunar
-        tumbler
-        ffmpegthumbnailer
-        gnome-pomodoro
-        feh
-  ];
+	    adwaita-icon-theme           # Standard GNOME icons (fallback for many apps)
+        bibata-cursors               # Modern, pixel-perfect cursor theme
+        ffmpegthumbnailer            # Lightweight video thumbnailer for file managers
+        feh                          # Fast and light image viewer/wallpaper setter
+        fluent-icon-theme            # Clean, Material-design inspired icon theme
+        github-cli                   # Official GitHub command-line tool (gh)
+        glib                         # Low-level core library (required for GSettings)
+        gnome-pomodoro               # Time management/productivity timer
+        gsettings-desktop-schemas    # Shared settings for desktop applications
+        imagemagick                  # Powerful CLI suite for image manipulation
+        kdePackages.breeze-icons     # High-quality KDE/Plasma icon set
+        libnotify                    # Library for sending desktop notifications
+        lxqt.lxqt-policykit          # Authentication agent for elevated permissions
+        nwg-look                     # GTK theme/icon/font customization tool for Wayland
+        procps                       # System process utilities (top, ps, free, etc.)
+        thunar                       # Fast and easy-to-use Xfce file manager
+        tumbler                      # D-Bus service for generating file thumbnails
+        xdg-user-dirs                # Tool to manage "Standard" folders (Documents, etc.)
+        yad                          # Tool to create graphical dialogs from CLI scripts
+        # adw-gtk3                   # Libadwaita theme for GTK3 apps (commented out)
+
+       ];
 
 
  

@@ -26,7 +26,7 @@
   #enable chrony for network time sync
   services.chrony.enable = true;
   services.chrony.extraConfig = ''
-   makestep 1.0 3
+  makestep 1.0 3
   '';
 
 

@@ -22,15 +22,13 @@ in
   ];
 
   home.packages = with pkgs; [
-    wl-clipboard
-    cliphist
-    wezterm
-    # Scratchpad Dependencies
-    foot
-    yazi
-    btop
-    waypaper
-    swaybg
+        btop         # A monitor of resources that displays usage and stats (CPU, memory, etc.)
+        cliphist     # A clipboard history manager for Wayland (often used with wl-clipboard)
+        foot         # A fast, lightweight, and minimalistic terminal emulator for Wayland
+        swaybg       # A wallpaper utility for Wayland compositors
+        waypaper     # A GUI wallpaper setter for Wayland and X11
+        wezterm      # A powerful, GPU-accelerated terminal emulator and multiplexer
+        yazi         # A blazing fast terminal file manager written in Rust 
   ];
 
   services.cliphist.enable = true;

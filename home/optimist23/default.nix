@@ -23,16 +23,16 @@
   # You can move user-specific packages here from configuration.nix
   home.packages = with pkgs; [
     # General apps
-    vlc
-   # dunst
-    libnotify
-    fuzzel
-    vibepanel
-    eza
-    zoxide
-    qutebrowser
-    pulsemixer
-    hyprshade
+        #dunst        # A lightweight and customizable notification daemon
+        eza          # A modern, feature-rich replacement for the 'ls' command
+        fuzzel       # An application launcher and menu for Wayland (similar to rofi)
+        hyprshade    # A tool to manage screen shaders/filters for Hyprland
+        libnotify    # A library for sending desktop notifications
+        pulsemixer   # A CLI-based audio mixer for PulseAudio and PipeWire
+        qutebrowser  # A keyboard-focused web browser with a Vim-like interface
+        vibepanel    # A lightweight, customizable status bar for Wayland
+        vlc          # A versatile and powerful cross-platform media player
+        zoxide       # A smarter 'cd' command that learns your habits
   ];
 
   # Enable Fish
