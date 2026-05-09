@@ -48,10 +48,12 @@ in
           "$mainMod, n, workspace, e+1"
           "$mainMod, b, workspace, e-1"
              
-          "SHIFT ALT, S, exec, grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/$(date
-          +'%Y-%m-%d-%H%M%S_grim.png') | wl-copy"
-          "CTRL SHIFT, S, exec, grim - | wl-copy"
-          "CTRL, ALT, exec, grim - | wl-copy"
+          
+           # Screenshot region/window to clipboard + file
+        "SHIFT ALT, S, exec, sh -c 'grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H%M%S).png | wl-copy -t image/png'"
+
+      # Screenshot full screen to clipboard
+        "$mainMod SHIFT, S, exec, sh -c 'grim - | wl-copy'"
 
 
 	          ];

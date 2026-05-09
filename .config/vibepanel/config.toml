@@ -1,103 +1,43 @@
-# =============================================================================
-# vibepanel Configuration
-# =============================================================================
-#
-# Minimal starter config. For all available options, see:
-# https://github.com/prankstr/vibepanel/blob/main/docs/configuration.md
-#
-# Commands:
-#   vibepanel --check-config         Validate configuration
-#   vibepanel --print-example-config Print this example config
-#
-# =============================================================================
-
 [bar]
-position = "top" # "top" or "bottom"
-size = 32
-border_radius = 30
-background_opacity = 0.0 # 0.0 = transparent (islands), 1.0 = solid
+position = "top"
+size = 35
+screen_margin = 0
+spacing = 4
+inset = 0
+padding = 0
+border_radius = 0
+background_opacity = 0.5
+background_color = "#18120c"
 
 [widgets]
-left = ["custom-os", "workspaces", "custom-pomo-status", "window_title"]
+left = ["workspaces", "window_title"]
 center = ["media"]
-right = [
-  "tray",
-  "updates",
-  "cpu",
-  "custom-pomodoro",
-  "quick_settings",
-  "battery",
-  "clock",
-  "notifications",
-]
-border_radius = 40
+right = [{ group = ["cpu", "memory"] },{ group = ["quick_settings", "battery"] }, "clock", "notifications"]
+border_radius = 0
 background_opacity = 1.0
-# popover_background_opacity = 0.9  # Override popover opacity (default: max of bar and widget opacity)
+background_color = "#504539"
 
-# Per-widget options use [widgets.<name>] sections.
-# Example:
-#   [widgets.clock]
-#   format = "%H:%M"
-#
-#   [widgets.battery]
-#   disabled = true
-#
-    [widgets.media]
-   visualizer = true  # Enable/disable cava audio visualizer (default: true)
-#
-# Custom widgets use the "custom-" prefix for user-defined buttons:
-#   right = ["custom-power", "custom-os", "tray", "clock"]
-#
-#   [widgets.custom-power]
-#   icon = "system-shutdown-symbolic"
-#   label = "Power"
-#   tooltip = "Power menu"
-#   on_click = "wlogout"
-#   on_click_right = "systemctl suspend"
-#
-   [widgets.custom-os]
-  # image = "~/with-home-manager/icons/Linux.png"  # file path (PNG, SVG, etc.)
-  image = "/run/current-system/sw/share/icons/hicolor/128x128/apps/nix-snowflake.png"
-   tooltip = "My Distro"
-#
-#   [widgets.custom-weather]
-#   exec = "curl -s 'wttr.in/?format=1'"
-#   template = " {output}"
-#   interval = 600
-#   on_click = "xdg-open https://wttr.in"
-#   tooltip = "Weather"
-#   max_chars = 30
-#
-# See documentation for all widget options.
+[widgets.workspaces]
+label_type = "index"
+background_color = "#f8bb71"
 
+[widgets.window_title]
+background_color = "#dfc1a2"
 
-[widgets.custom-pomodoro]
-image = "~/.config/pomodoro/icons/stopwatch.png" # Or "chronometer-symbolic"
-tooltip = "Pomodoro Timer"
-on_click = "~/Desktop/pomodoro-menu.sh"         # This matches the 'name' in your Nix config
+[widgets.cpu]
+background_color = "#bccd9e"
 
+[widgets.memory]
+format = "percentage"
+background_color = "#bccd9e"
 
-[widgets.custom-pomo-status]
-exec = "~/.config/pomodoro/scripts/pomodoro-status.sh"
-interval = 1
-image = "~/.config/pomodoro/icons/sand-clock2.png"
-on_click = "pomodoro-menu"
-tooltip = "Pomodoro Timer"
+[widgets.clock]
+format = "%A %H:%M"
+background_color = "#663e00"
 
+[widgets.notifications]
+background_color = "#ffb4ab"
 
 [theme]
-mode = "gtk" # "auto", "dark", "light", "gtk"
-accent = "gtk" # "gtk", "none", or hex color
-#animations = true  # Enable/disable all CSS transitions and animations
-ripple = true      # Enable/disable Material Design ripple effect on click
+accent = "#f8bb71"
 
-[theme.icons]
-theme = "material" # "material" or "gtk"
-weight = 400       # Material icon stroke weight (100-700)
-
-
-[advanced]
- compositor = "auto"  # "auto", "hyprland", "niri", "mango"
-
-# Custom CSS: place style.css in same directory as this file.
-# See documentation for available CSS variables and classes.

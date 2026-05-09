@@ -55,7 +55,7 @@ in
         resize_on_border = true;
         allow_tearing = true;
         gaps_in = 3;
-        gaps_out = 7;
+        gaps_out = 5;
         border_size = 3;
          # Use two colors here (e.g., your primary and a secondary/accent)
         "col.active_border" = "$primary $surface $tertiary $surface $secondary 45deg";
@@ -66,7 +66,7 @@ in
       decoration = {
         active_opacity = 1.0;
         inactive_opacity = 0.9;
-      	rounding = 15;
+      	rounding = 1;
         blur = {
           enabled = false;
           size = 5;
