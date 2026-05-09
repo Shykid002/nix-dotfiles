@@ -35,15 +35,23 @@
                 blueman
                 pavucontrol
                 quickshell
-                qt5.qtdeclarative
-                qt5.qtquickcontrols
-                libsForQt5.qt5.qtgraphicaleffects
+                kdePackages.qt6ct
+                qt6.qtdeclarative
+                qt6.qt5compat
+                qt6.qtmultimedia
+                qt6.qtsvg
+                qt6.qtbase
+                kdePackages.qtimageformats
                 playerctl
+                python3
                 #nemo
                 #inputs.matugen.packages.${system}.default
             ];
-
-
+    #enable Qt
+    qt = {
+        enable = true;
+        platformTheme.name = "qtct";
+        };
     
     hardware.bluetooth = {
         enable = true;      # Enables the bluez service

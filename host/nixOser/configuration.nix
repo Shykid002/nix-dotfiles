@@ -150,7 +150,6 @@ programs.dconf.enable = true;
 	    libnotify
 	    procps
 	    glib
-	    procps
 	    gsettings-desktop-schemas
 	    xdg-user-dirs
         github-cli
