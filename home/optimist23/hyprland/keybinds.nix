@@ -13,15 +13,15 @@ in
     wayland.windowManager.hyprland.settings = {
         "$mainMod" = "SUPER";
         bind = [
-            "$mainMod, Q, exec, ${terminal}"
-            "$mainMod, C, killactive,"
-            "CTRL, M, exit"
-	        "$mainMod, space, exec, fuzzel"
-	        "$mainMod, F, fullscreen"
-	        "$mainMod, Y, exec, waypaper"
+          "$mainMod, Q, exec, ${terminal}"
+          "$mainMod, C, killactive,"
+          "CTRL, M, exit"
+	      "$mainMod, space, exec, fuzzel"
+	      "$mainMod, F, fullscreen"
+	      "$mainMod, Y, exec, waypaper"
 
-            "$mainMod, T, togglefloating"
-	        "$mainMod, M, exec, hyprctl keyword general:layout master"
+          "$mainMod, T, togglefloating"
+	      "$mainMod, M, exec, hyprctl keyword general:layout master"
           "$mainMod, D, exec, hyprctl keyword general:layout dwindle"
 
 
@@ -48,6 +48,10 @@ in
           "$mainMod, n, workspace, e+1"
           "$mainMod, b, workspace, e-1"
              
+          "SHIFT ALT, S, exec, grim -g "$(slurp)" - | tee ~/Pictures/Screenshots/$(date
+          +'%Y-%m-%d-%H%M%S_grim.png') | wl-copy"
+          "CTRL SHIFT, S, exec, grim - | wl-copy"
+          "CTRL, ALT, exec, grim - | wl-copy"
 
 
 	          ];
