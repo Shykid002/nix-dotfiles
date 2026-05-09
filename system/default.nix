@@ -32,7 +32,7 @@
                 pavucontrol                  # PulseAudio/Pipewire volume control GUI
                 playerctl                    # CLI media player controller (mpris)
                 piper-tts                    # Local neural text-to-speech engine
-                poppler_utils                # PDF rendering and conversion utilities
+                poppler-utils                # PDF rendering and conversion utilities
                 python3                      # Python programming language
                 qt6.qt5compat                # Qt6 module for Qt5 compatibility
                 qt6.qtbase                   # Base Qt6 framework
