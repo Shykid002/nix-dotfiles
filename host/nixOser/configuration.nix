@@ -145,6 +145,7 @@ programs.dconf.enable = true;
         feh                          # Fast and light image viewer/wallpaper setter
         fluent-icon-theme            # Clean, Material-design inspired icon theme
         github-cli                   # Official GitHub command-line tool (gh)
+        go
         glib                         # Low-level core library (required for GSettings)
         gnome-pomodoro               # Time management/productivity timer
         gsettings-desktop-schemas    # Shared settings for desktop applications

@@ -17,6 +17,7 @@
       tab_bar_style = "powerline";
       tab_powerline_style = "slanted";
       active_tab_font_style = "bold";
+      allow_remote_control = "yes";
     };
 
     # Tab Control & Layout Keybindings
