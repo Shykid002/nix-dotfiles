@@ -16,6 +16,7 @@
     interactiveShellInit = ''
       set -g fish_greeting "" # Disable welcome message
       set -gx EDITOR nvim   # setnvim as default editor
+      set -U fish_user_paths /home/optimist23/go/bin
     '';  
 
   # Note: Aliases and zoxide init are now handled automatically by the modules below

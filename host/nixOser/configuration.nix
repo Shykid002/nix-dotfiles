@@ -146,6 +146,7 @@ programs.dconf.enable = true;
         fluent-icon-theme            # Clean, Material-design inspired icon theme
         github-cli                   # Official GitHub command-line tool (gh)
         go
+        gcc
         glib                         # Low-level core library (required for GSettings)
         gnome-pomodoro               # Time management/productivity timer
         gsettings-desktop-schemas    # Shared settings for desktop applications
