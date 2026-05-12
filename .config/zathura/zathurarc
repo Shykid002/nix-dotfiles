@@ -1,92 +1,49 @@
-" -----------------------------------------------------------------------------
-" Zathura settings
-" -----------------------------------------------------------------------------
+# Font
+set font "JetBrainsMono Nerd Font 12"
 
-" Colors
-set default-bg              "rgba(71, 42, 0, 1)"
-set default-fg              "#f8bb71"
+# History
+set show-recent 3
+# Color scheme - Gruvbox Dark
+set default-bg              "#282828"
+set default-fg              "#ebdbb2"
+set statusbar-bg            "#3c3836"
+set statusbar-fg            "#ebdbb2"
+set inputbar-bg             "#3c3836"
+set inputbar-fg             "#ebdbb2"
+set notification-bg         "#3c3836"
+set notification-fg         "#ebdbb2"
+set notification-error-bg   "#cc241d"
+set notification-error-fg   "#fbf1c7"
+set notification-warning-bg "#d79921"
+set notification-warning-fg "#282828"
 
-set statusbar-bg            "#472a00"
-set statusbar-fg            "#f8bb71"
+# Highlight colors
+set highlight-color         "#83a598"
+set highlight-active-color  "#458588"
 
-set inputbar-bg             "#472a00"
-set inputbar-fg             "#f8bb71"
+# Completion
+set completion-bg           "#3c3836"
+set completion-fg           "#ebdbb2"
+set completion-highlight-fg "#282828"
+set completion-highlight-bg "#83a598"
+set completion-group-bg     "#3c3836"
+set completion-group-fg     "#458588"
 
-set notification-error-bg   "#690005"
-set notification-error-fg   "#ffb4ab"
+# Recolor (invert) PDF content with Gruvbox colors
+set recolor                 true
+set recolor-keephue         true
+set recolor-darkcolor       "#282828"
+set recolor-lightcolor      "#ebdbb2"
 
-set notification-warning-bg "#ffddb9"
-set notification-warning-fg "#93000a"
+# Smooth scrolling
+set scroll-step             50
 
-set highlight-color         "#ffddb9"
-set highlight-active-color  "#f8bb71"
+# Enable page cache
+set page-cache              true
 
-set completion-highlight-fg "#472a00"
-set completion-highlight-bg #f8bb71""
-
-set completion-bg           "#472a00"
-set completion-fg           "#f8bb71"
-
-set notification-bg         "#472a00"
-set notification-fg         "#f8bb71"
-
-set recolor                 "true"
-set recolor-lightcolor      "rgba(71, 42, 0, 1)"
-set recolor-darkcolor       "#f8bb71"
-set recolor-reverse-video   "false"
-set recolor-keephue         "true"
-
-" Clipboard
+# Hide UI elements
+set show-scrollbars         false
+set statusbar-h-padding     5
+set statusbar-v-padding     2
 set selection-clipboard clipboard
 
-" Search
-set incremental-search true
-set search-hadjust true
-
-" Autoadjust
-set adjust-open width
-
-" Typography
-set font "FiraCode Nerd Font 12"
-
-" -----------------------------------------------------------------------------
-" Zathura mappings
-" -----------------------------------------------------------------------------
-" remove status bar
-set guioptions none
-" Zoom in/out
-map [normal]     z zoom in
-map [normal]     Z zoom out
-map [fullscreen] z zoom in
-map [fullscreen] Z zoom out
-
-" Toggle mode
-map [normal]     D toggle_page_mode
-map [fullscreen] D toggle_page_mode
-
-" Scroll
-map [normal]     u scroll half-up
-map [normal]     d scroll half-down
-map [fullscreen] u scroll half-up
-map [fullscreen] d scroll half-down
-
-" Fullscreen
-map [normal]     f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
-
-" Reload
-map [normal]     <C-r> reload
-map [fullscreen] <C-r> reload
-
-" Status bar
-map [normal]     b toggle_statusbar
-map [fullscreen] b toggle_statusbar
-
-" Set width as in mupdf
-map [normal]     H adjust_window best-fit
-map [normal]     W adjust_window width
-map [fullscreen] H adjust_window best-fit
-map [fullscreen] W adjust_window width
-
-map [normal]     i set recolor
-map [fullscreen] i set recolor
