@@ -1,0 +1,50 @@
+[bar]
+position = "top"
+size = 35
+screen_margin = 2
+spacing = 2
+inset = 0
+padding = 0
+border_radius = 0
+background_opacity = 0.5
+background_color = "{{colors.surface.default.hex}}"
+
+[widgets]
+left = ["workspaces", "window_title"]
+center = ["media"]
+right = [{ group = ["cpu", "memory"] },{ group = ["quick_settings", "battery"] }, "clock", "notifications"]
+border_radius = 0
+background_opacity = 0.9
+background_color =  "{{colors.tertiary_container.default.hex}}"
+
+
+#"{{colors.surface_variant.default.hex}}"
+
+[widgets.workspaces]
+label_type = "index"
+background_color = "{{colors.primary.default.hex}}"
+
+[widgets.window_title]
+background_color = "{{colors.secondary.default.hex}}"
+
+[widgets.cpu]
+background_color = "{{colors.tertiary.default.hex}}"
+
+[widgets.memory]
+format = "percentage"
+background_color = "{{colors.tertiary.default.hex}}"
+
+[widgets.clock]
+format = "%A %H:%M"
+background_color = "{{colors.primary_container.default.hex}}"
+
+[widgets.notifications]
+background_color = "{{colors.error.default.hex}}"
+
+[theme]
+accent = "{{colors.primary.default.hex}}"
+
+[osd]
+enabled = true
+position = "bottom" # "bottom", "top", "left", "right"
+

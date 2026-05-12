@@ -26,7 +26,7 @@
         useOSProber = false;
         };
 
-    timeout = 0;
+    timeout = 5;
 
  };
 

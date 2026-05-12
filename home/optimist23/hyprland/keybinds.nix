@@ -17,10 +17,15 @@ in
           "$mainMod, C, killactive,"
           "CTRL, M, exit"
 	      "$mainMod, space, exec, fuzzel"
-	      "$mainMod, F, fullscreen"
-	      "$mainMod, Y, exec, waypaper"
+	      "$mainMod, F, fullscreen,1"
+          "$mainMod SHIFT, F, fullscreen,0"
 
+
+
+	      "$mainMod, W, exec, waypaper"
           "$mainMod, T, togglefloating"
+          "$mainMod, T, resizeactive, exact 800 600"
+          "$mainMod, T, centerwindow"
 	      "$mainMod, M, exec, hyprctl keyword general:layout master"
           "$mainMod, D, exec, hyprctl keyword general:layout dwindle"
 
@@ -35,6 +40,12 @@ in
           "$mainMod, k, movefocus, u"
           "$mainMod, j, movefocus, d"
 
+          
+    	  "$mainMod, left, movefocus, l"
+          "$mainMod, right, movefocus, r"
+          "$mainMod, up, movefocus, u"
+          "$mainMod, down, movefocus, d"
+
           "$mainMod SHIFT, H, movewindow, l"
           "$mainMod SHIFT, L, movewindow, r"
           "$mainMod SHIFT, K, movewindow, u"
@@ -44,6 +55,7 @@ in
           "$mainMod CTRL, h, resizeactive, -20 0"
           "$mainMod CTRL, k, resizeactive, 0 -20"
           "$mainMod CTRL, j, resizeactive, 0 20"
+
 
           "$mainMod, n, workspace, e+1"
           "$mainMod, b, workspace, e-1"

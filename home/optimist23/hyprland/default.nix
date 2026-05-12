@@ -41,6 +41,7 @@ in
       source = "~/.config/hypr/colors.conf";
       
       monitor = [ ", highrr, auto, 1" ];
+
       
       # Merge the generated workspace binds here
       bind = [ ] ++ workspaces; 
@@ -54,9 +55,10 @@ in
         layout = "dwindle";
         resize_on_border = true;
         allow_tearing = true;
-        gaps_in = 5;
+        gaps_in = 4;
         gaps_out = 3;
         border_size = 3;
+       
          # Use two colors here (e.g., your primary and a secondary/accent)
         "col.active_border" = "$primary $surface $tertiary $surface $secondary 45deg";
         "col.inactive_border" = "$surface";
@@ -130,7 +132,7 @@ in
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         enable_swallow = true;
-        swallow_regex = "^(wezterm)$";
+        swallow_regex = "^(kitty)$";
       };
     };
   };

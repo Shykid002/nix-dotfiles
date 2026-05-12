@@ -2,7 +2,7 @@
  # Declare variables.
 
  browser = "brave";
- terminal = "wezterm";
+ terminal = "kitty";
  barChosed = "vibepanel";
 
 

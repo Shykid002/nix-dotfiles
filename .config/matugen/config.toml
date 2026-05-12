@@ -40,10 +40,10 @@ output_path = '~/.config/gtk-3.0/gtk.css'
 # ...
 
 # ...
-[templates.zathura]
-input_path = '~/.config/matugen/templates/zathura-colors'
-output_path = '~/.config/zathura/zathurarc'
-post_hook = 'pkill -SIGUSR1 zathura'
+#[templates.zathura]
+#input_path = '~/.config/matugen/templates/zathura-colors'
+#output_path = '~/.config/zathura/zathurarc'
+#post_hook = 'pkill -SIGUSR1 zathura'
 # ...
 
 # RMPC Terminal player
@@ -115,3 +115,18 @@ output_path = '~/.config/oh-my-posh/colors.json'
 input_path = '~/.config/matugen/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
 post_hook = 'pkill -USR2 btop || true'
+
+
+
+[templates.quickshell]
+input_path = '~/.config/matugen/templates/colors.mustache'
+output_path = '~/.config/quickshell/theme/colors.qml'
+
+
+
+[templates.bar]
+input_path = '~/.config/matugen/templates/vibepanel.toml'
+output_path = '~/.config/vibepanel/config.toml' # Update to your bar's actual config path
+# post_hook = 'pkill -SIGUSR2 your_bar_process' # Optional: command to reload your bar
+
+

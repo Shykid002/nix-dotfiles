@@ -17,6 +17,8 @@
       set -g fish_greeting "" # Disable welcome message
       set -gx EDITOR nvim   # setnvim as default editor
       set -U fish_user_paths /home/optimist23/go/bin
+      alias c 'clear'
+      alias zathura-theme '/home/optimist23/.config/zathura/zathura-theme.py'
     '';  
 
   # Note: Aliases and zoxide init are now handled automatically by the modules below
