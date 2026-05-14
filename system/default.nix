@@ -43,6 +43,7 @@
                 slurp                        # Select a region in a Wayland compositor
                 tree                         # Display directory trees in the terminal
                 unzip                        # Utility for extracting .zip files
+                waybar
                 wezterm                      # GPU-accelerated terminal emulator
                 wl-clipboard                 # Wayland copy/paste command line tools
                 zathura                      # Highly customizable document viewer

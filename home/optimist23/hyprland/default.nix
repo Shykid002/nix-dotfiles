@@ -40,18 +40,18 @@
       
 
 
-          workspaces = [
-      "1, defaultName:一, persistent:true"
-      "2, defaultName:二, persistent:true"
-      "3, defaultName:三, persistent:true"
-      "4, defaultName:四, persistent:true"
-      "5, defaultName:五, persistent:true"
-      "6, defaultName:六, persistent:true"
-      "7, defaultName:七, persistent:true"
-      "8, defaultName:八, persistent:true" 
-      "9, defaultName:九, persistent:true" 
-      "10, defaultName:十, persistent:true" # Note: Use 10 instead of 0 for clean sequencing
-    ];
+      workspaces = [
+  "1, name:一, persistent:true, defaultName:一"
+  "2, name:二, persistent:true, defaultName:二"
+  "3, name:三, persistent:true, defaultName:三"
+  "4, name:四, persistent:true, defaultName:四"
+  "5, name:五, persistent:true, defaultName:五"
+  "6, name:六, defaultName:六"
+  "7, name:七, defaultName:七"
+  "8, name:八, defaultName:八" 
+  "9, name:九, defaultName:九" 
+  "0, name:十, defaultName:十"
+];
 
 
       input = {
