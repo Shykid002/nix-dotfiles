@@ -55,6 +55,30 @@ in
           "$mainMod CTRL, h, resizeactive, -20 0"
           "$mainMod CTRL, k, resizeactive, 0 -20"
           "$mainMod CTRL, j, resizeactive, 0 20"
+            
+        # Switch to Workspaces (SUPER + 1-0)
+          "SUPER, 1, workspace, name:一"
+          "SUPER, 2, workspace, name:二"
+          "SUPER, 3, workspace, name:三"
+          "SUPER, 4, workspace, name:四"
+          "SUPER, 5, workspace, name:五"
+          "SUPER, 6, workspace, name:六"
+          "SUPER, 7, workspace, name:七"
+          "SUPER, 8, workspace, name:八"
+          "SUPER, 9, workspace, name:九"
+          "SUPER, 0, workspace, name:十"
+
+          # Move Active Window to Workspaces (SUPER + SHIFT + 1-0)
+          "SUPER SHIFT, 1, movetoworkspace, name:一"
+          "SUPER SHIFT, 2, movetoworkspace, name:二"
+          "SUPER SHIFT, 3, movetoworkspace, name:三"
+          "SUPER SHIFT, 4, movetoworkspace, name:四"
+          "SUPER SHIFT, 5, movetoworkspace, name:五"
+          "SUPER SHIFT, 6, movetoworkspace, name:六"
+          "SUPER SHIFT, 7, movetoworkspace, name:七"
+          "SUPER SHIFT, 8, movetoworkspace, name:八"
+          "SUPER SHIFT, 9, movetoworkspace, name:九"
+          "SUPER SHIFT, 0, movetoworkspace, name:十"
 
 
           "$mainMod, n, workspace, e+1"

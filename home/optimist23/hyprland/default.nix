@@ -1,15 +1,9 @@
 { pkgs, lib, ... }: # Added pkgs and lib
 
-let
-  mod = "SUPER";
-  workspaces = builtins.concatLists (builtins.genList
-    (x:
-      let ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10)); in [
-        "${mod}, ${ws}, workspace, ${builtins.toString (x + 1)}"
-        "${mod} SHIFT, ${ws}, movetoworkspace, ${builtins.toString (x + 1)}"
-      ])
-    10);
-in
+
+
+
+
 {
   imports = [
     ./window-rule.nix
@@ -42,9 +36,23 @@ in
       
       monitor = [ ", highrr, auto, 1" ];
 
+     
       
-      # Merge the generated workspace binds here
-      bind = [ ] ++ workspaces; 
+
+
+          workspaces = [
+      "1, defaultName:一, persistent:true"
+      "2, defaultName:二, persistent:true"
+      "3, defaultName:三, persistent:true"
+      "4, defaultName:四, persistent:true"
+      "5, defaultName:五, persistent:true"
+      "6, defaultName:六, persistent:true"
+      "7, defaultName:七, persistent:true"
+      "8, defaultName:八, persistent:true" 
+      "9, defaultName:九, persistent:true" 
+      "10, defaultName:十, persistent:true" # Note: Use 10 instead of 0 for clean sequencing
+    ];
+
 
       input = {
         kb_layout = "us";
