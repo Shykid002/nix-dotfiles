@@ -1,129 +1,110 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix
-              ../../system # Path to your new module
-              ./system-services.nix
-              ../../profile/amd
-              ./modemmanager.nix
-            ];
+  imports = [ 
+    ./hardware-configuration.nix
+    ../../system 
+    ./system-services.nix
+    ../../profile/intel or wherever you saved the previous file
+    ./modemmanager.nix
+  ];
 
-
-  # Use the systemd-boot EFI boot loader.
-   boot.loader = {
-      systemd-boot.enable = false;
-      # grub.extraEntries = ''
-
-       efi = {
-          canTouchEfiVariables = true;
-          efiSysMountPoint = "/boot";
-         };
+  # Use the GRUB EFI boot loader (Perfect for MacBooks)
+  boot.loader = {
+    systemd-boot.enable = false;
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
 
     grub = {
-        enable = true;
-        device = "nodev";
-        efiSupport = true;
-        useOSProber = false;
-        };
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = false;
+    };
 
     timeout = 5;
+  };
 
- };
-
- # Enable plymouth
+  # Boot parameters and Splash Screen
   boot = {
-
+    # FIXED: Removed 'maxcpus=2' and 'radeon.dpm=1'
     kernelParams = [ 
-        "quiet"
-        "splash"
-        "maxcpus=2"
-        "radeon.dpm=1"
-        ];
+      "quiet" 
+      "splash" 
+    ];
 
-
-	plymouth.enable = true;
-    plymouth.themePackages = [ pkgs.plymouth-matrix-theme ];
-    #plymouth.themePackages = [ pkgs.adi1090x-plymouth-themes ];
-    plymouth.theme = "matrix";
-
-
+    plymouth = {
+      enable = true;
+      themePackages = [ pkgs.plymouth-matrix-theme ];
+      theme = "matrix";
+    };
   };
 
-   # Enable thermald
-    services.thermald.enable = true;
+  # Intel-specific Power and Thermal Management
+  services.thermald.enable = true; # Highly recommended for MacBooks to avoid overheating
 
-	
-    # Enable TLP
-
+  # Optimized TLP settings for a balance between battery and Hyprland performance
   services.tlp = {
-        enable = true;
-        settings = {
-            CPU_SCALING_GOVERNOR_ON_AC = "powersave";
-            CPU_SCALING_GOVERNOR_ON_Bat = "powersave";
-            CPU_ENERGY_PERF_POLICY_ON_AC = "power";
-            CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-        };
-
-
-
+    enable = true;
+    settings = {
+      # CHANGED: 'powersave' is fine, but 'power' on AC forces the Intel CPU into its lowest performance state.
+      # 'balance_performance' ensures Hyprland doesn't stutter when plugged into charger.
+      CPU_SCALING_GOVERNOR_ON_AC = "powersave";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      
+      CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance"; 
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
+    };
   };
 
-# Use latest kernel.
+  # Use a recent stable kernel (Linux 6.18 is a great choice)
   boot.kernelPackages = pkgs.linuxPackages_6_18;
 
-  # Enable X11 
+  # Enable X11 / Display systems
   services.xserver.enable = true;
   services.xserver.excludePackages = [ pkgs.xterm ];
-  xdg.terminal-exec = {
-  enable = true;
-  settings = {
-    default = [ "kitty.desktop" ];
-  };
-};
-
-
-
-  # Graphics acceleration
-  hardware.graphics.enable = true;
   
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [ "kitty.desktop" ];
+    };
+  };
 
+  # Graphics acceleration (Crucial for smooth Wayland animations)
+  hardware.graphics.enable = true;
+
+  # Display Manager (Ly Console Matrix Display Manager)
   services.displayManager.ly = {
     enable = true;
-    # Optional: customize the look
     settings = {
-      animation = "matrix"; # The cool falling text effect
-      restore = true;       # Remembers your last used session (Hyprland)
+      animation = "matrix"; 
+      restore = true;       
       clock = "%c";
     };
   };
 
+  # Wayland Environment Fixes
+  environment.sessionVariables = {
+    # Intel works completely fine with hardware cursors. 
+    # Turning this off can sometimes cause cursor flickering on Intel HD 6000.
+    WLR_NO_HARDWARE_CURSORS = "0"; 
+  };
 
- 
-
-
-    environment.sessionVariables = {
-          WLR_NO_HARDWARE_CURSORS = "1";
-           };
-
-
-
-
-      # Hyprland
+  # Hyprland Setup
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
   };
 
+  programs.dconf.enable = true;
 
-programs.dconf.enable = true;
-  	
-
-  # MangoWM
+  # MangoHUD / MangoWM performance overlay
   programs.mango = {
     enable = true;
-  # addLoginEntry = true; # ensures it shows up in SDDM
   };
-
 
   # Nix path and registry to flake inputs
   nix = {
@@ -131,42 +112,36 @@ programs.dconf.enable = true;
     registry.nixpkgs.flake = inputs.nixpkgs;
   };
 
-
-  # configure nixpkgs instance
+  # Configure nixpkgs instance
   nixpkgs.config = {
     allowUnfree = true;
   };
-  
+
   # System packages
   environment.systemPackages = with pkgs; [
-	    adwaita-icon-theme           # Standard GNOME icons (fallback for many apps)
-        bibata-cursors               # Modern, pixel-perfect cursor theme
-        ffmpegthumbnailer            # Lightweight video thumbnailer for file managers
-        feh                          # Fast and light image viewer/wallpaper setter
-        fluent-icon-theme            # Clean, Material-design inspired icon theme
-        github-cli                   # Official GitHub command-line tool (gh)
-        go
-        gcc
-        glib                         # Low-level core library (required for GSettings)
-        gnome-pomodoro               # Time management/productivity timer
-        gsettings-desktop-schemas    # Shared settings for desktop applications
-        imagemagick                  # Powerful CLI suite for image manipulation
-        kdePackages.breeze-icons     # High-quality KDE/Plasma icon set
-        libnotify                    # Library for sending desktop notifications
-        lxqt.lxqt-policykit          # Authentication agent for elevated permissions
-        nwg-look                     # GTK theme/icon/font customization tool for Wayland
-        procps                       # System process utilities (top, ps, free, etc.)
-        thunar                       # Fast and easy-to-use Xfce file manager
-        tumbler                      # D-Bus service for generating file thumbnails
-        xdg-user-dirs                # Tool to manage "Standard" folders (Documents, etc.)
-        yad                          # Tool to create graphical dialogs from CLI scripts
-        # adw-gtk3                   # Libadwaita theme for GTK3 apps (commented out)
+    adwaita-icon-theme           
+    bibata-cursors               
+    ffmpegthumbnailer            
+    feh                          
+    fluent-icon-theme            
+    github-cli                   
+    go
+    gcc
+    glib                         
+    gnome-pomodoro               
+    gsettings-desktop-schemas    
+    imagemagick                  
+    kdePackages.breeze-icons     
+    libnotify                    
+    lxqt.lxqt-policykit          
+    nwg-look                     
+    procps                       
+    thunar                       
+    tumbler                      
+    xdg-user-dirs                
+    yad                          
+  ];
 
-       ];
-
-
- 
-  # System version (leave as is)
+  # System version
   system.stateVersion = "24.05";
 }
-
