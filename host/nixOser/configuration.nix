@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ../../system 
     ./system-services.nix
-    ../../profile/intel or wherever you saved the previous file
+    ../../profile/intel 
     ./modemmanager.nix
   ];
 
