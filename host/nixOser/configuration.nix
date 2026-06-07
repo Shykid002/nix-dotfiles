@@ -27,8 +27,27 @@
     timeout = 5;
   };
 
+
+  hardware.enableRedistributableFirmware = true;
+
+  hardware.firmware = [
+        pkgs.linux-firmware
+  ];
+
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "broadcom-sta-6.30.223.271-59-6.18.20"];
+
+
   # Boot parameters and Splash Screen
   boot = {
+    
+    blacklistedKernelModules = [ "b43" "bcma" "ssb" "brcmfmac" "brcmsmac" ];
+    kernelModules = ["wl"];
+
+    extraModulePackages = with
+    config.boot.kernelPackages;[broadcom_sta];
+
     # FIXED: Removed 'maxcpus=2' and 'radeon.dpm=1'
     kernelParams = [ 
       "quiet" 

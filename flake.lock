@@ -265,11 +265,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1778001012,
-        "narHash": "sha256-QsYSfNzaAtUTJGuGxikproRgMmmcKO4ZCkyrbruh4Z4=",
+        "lastModified": 1780826837,
+        "narHash": "sha256-20ETQZzx7gIf1/rohaavOFNHQBCt8l44bXoBtt9qp/U=",
         "owner": "prankstr",
         "repo": "vibepanel",
-        "rev": "6e58ca24fa0c9c1354b638ada20ecd6f14db5a22",
+        "rev": "9cabdf92766ec756d4ffbf2aea739220a4a368dc",
         "type": "github"
       },
       "original": {
