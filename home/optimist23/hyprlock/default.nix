@@ -357,7 +357,7 @@ in
         # Dim screen after 2.5 minutes
         timeout = 150;
         on-timeout = "brightnessctl set 10%"; 
-        on-resume = "brightnessctl set 100%";
+        on-resume = "brightnessctl set 50%";
         }
 
         {

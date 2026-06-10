@@ -10,7 +10,7 @@ background_opacity = 0.5
 background_color = "{{colors.surface.default.hex}}"
 
 [widgets]
-left = ["workspaces", "window_title"]
+left = ["custom-os", "workspaces", "window_title"]
 center = ["media"]
 right = [{ group = ["cpu", "memory"] },{ group = ["quick_settings", "battery"] }, "clock", "notifications"]
 border_radius = 0
@@ -21,7 +21,11 @@ background_color =  "{{colors.tertiary_container.default.hex}}"
 #"{{colors.surface_variant.default.hex}}"
 
 [widgets.workspaces]
-label_type = "index"
+# Defines the string sequence for your workspaces
+label_type = "name" 
+#icons = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
+#label_type = "index"
+animate = true
 background_color = "{{colors.primary.default.hex}}"
 
 [widgets.window_title]
@@ -41,10 +45,24 @@ background_color = "{{colors.primary_container.default.hex}}"
 [widgets.notifications]
 background_color = "{{colors.error.default.hex}}"
 
+[widgets.custom-os]
+image = "~/nix-dotfiles/icons/NixOS.png"  # file path (PNG, SVG, etc.)
+on_click = "fuzzel"
+tooltip = "My Distro"
+
 [theme]
 accent = "{{colors.primary.default.hex}}"
+animations = true
+ripple = true
+
 
 [osd]
 enabled = true
-position = "bottom" # "bottom", "top", "left", "right"
+position = "right" # "bottom", "top", "left", "right"
+timeout_ms = 1500
+show_value = true
 
+
+[advanced]
+pango_font_rendering = true
+compositor = "auto"
